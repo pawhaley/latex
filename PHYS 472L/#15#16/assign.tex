@@ -1,0 +1,90 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{amssymb}
+\usepackage{fullpage}
+\author{Parker Whaley}
+\title{PHYS 472L \#15\#16}
+\begin{document}
+
+\maketitle
+
+\section{inelastic collision}
+Consider a system with many masses of varying mass that only interact under inelastic collision.  By definition KE (kinetic energy) is E-m for each particle also note that the definition of inelastic collision is a collision that preserves KE.  We can then say, since the only interactions in the system are inelastic collisions that at any point in time \(\Sigma (\)KE\()_{i}\).  at a moment lets add up all KE...(work later)
+
+\section{\#15}
+Two identical particles undergo elastic collision consider the frame where particle one is at rest initially and particle two is travelling towards it.  Take the direction of travel of particle two as out \(\hat{x}\) and lets call the angle that particle two moves off at \(\theta\).  lets use the notation that ' indicates after collision for example E is the energy of particle two before collision and E' is the energy of particle two after collision.  Elastic collision is collision where kinetic energy or T and mass are conserved.  We know that we must conserve relativistic momentum thus: 
+
+\(P_{1}+P_{2}=P_{1'}+P_{2'}\) 
+
+\(P_{1}+P_{2}-P_{2'}=P_{1'}\)
+
+Take the projection of each side onto itself noting that \(P_{x}\bullet P_{x}=m^@\)
+
+\(3m^{2}+2(P_{1}\bullet P_{2}-P_{1}\bullet P_{2'}-P_{2}\bullet P_{2'})=m^2\)
+
+\(P_{1}\bullet P_{2}-P_{1}\bullet P_{2'}-P_{2}\bullet P_{2'}=-m^2\)
+
+Noting:
+
+\(P_{1}=m(1,\vec{0})\)
+
+\(P_{2}=(E,\vec{p_{2}})\)
+
+\(P_{2'}=(E',\vec{p_{2'}})\)
+
+Also that:
+
+\(P_{x}\bullet P_{x}=m^{2}=E*E-p_{x}\bullet p_{x}\)
+
+so:
+
+\(\mid\vec{p_{x}}\mid=\sqrt{E*E-m^{2}}\)
+
+and knowing:
+
+\(E=m+T \longrightarrow E^{2}=m^2+mT+T^2\) (T is kinetic energy)
+
+we get:
+
+\(\mid\vec{p_{x}}\mid=\sqrt{mT+T^2}\)
+
+Now we can examine each term:
+
+\(P_{1}\bullet P_{2}=mE=m^2+mT\)
+
+\(P_{1}\bullet P_{2'}=mE'=m^2+mT'\)
+
+\(P_{2}\bullet P_{2'}=E*E'-p_{2}\bullet p_{2'}=(m+T)*(m+T')-\sqrt{(mT+T^2)*(mT'+T'^2)}*cos(\theta)=m^2+mT+mT'+T*T'-\sqrt{(mT+T^2)*(mT'+T'^2)}*cos(\theta)\)
+
+Pasting into our original equation:
+
+\(P_{1}\bullet P_{2}-P_{1}\bullet P_{2'}-P_{2}\bullet P_{2'}=-m\)
+
+\(m^2+mT-(m^2+mT')-(m^2+mT+mT'+T*T'-\sqrt{(mT+T^2)*(mT'+T'^2)}*cos(\theta))=-m^2\)
+
+\(-2mT'-T*T'+\sqrt{(mT+T^2)*(mT'+T'^2)}*cos(\theta)=0\)
+
+\(\sqrt{(mT+T^2)*(mT'+T'^2)}*cos(\theta)=2mT'+T*T'\)
+
+\((mT+T^2)*(mT'+T'^2)=T'^2*(2m+T)^{2}/cos^{2}(\theta)\)
+
+\((mT+T^2)*m+(mT+T^2)*T'=T'*(2m+T)^{2}/cos^{2}(\theta)\)
+
+\(\frac{(mT+T^2)*m}{(2m+T)^{2}/cos^{2}(\theta)-(mT+T^2)}=T'\)
+
+\subsection{\#16a}
+Classically \(E=\frac{m*V^2}{2}\)
+and in classically physics velocities add so particle A sees particle B coming towards it with energy \(E'=\frac{m*(2V)^2}{2}=4E\)
+
+\subsection{\#16b}
+Using E as total energy \(=P^{0}\) and T as kinetic energy \(T=E-m\) start in the frame of the center of momentum.  Particle A is moving in the \(\hat{x}\) direction and B is moving in the \(-\hat{x}\) direction so A has a relativistic velocity \((E/m,x,0,0)\) we can solve for x easily by recalling that in Tr=-2 self projection of velocity is 1.  \(1=E^2/m^2-x^2\) so \(x=\sqrt{E^2/m^2-1}\) and \(u_{A}=(E/m,\sqrt{E^2/m^2-1},0,0)\) and we can also solve for the momentum of particle B \(P_{B}=(E,-m*\sqrt{E^2/m^2-1},0,0)\).  We know that the energy of B in A's frame is simply \(u_{A}\bullet P_{B}\) since \(u_{A}\) will simply grab the first component of \(P_{B}\) this projection is also frame independent so we need only take this projection to see what energy A thinks particle B has.  \(u_{A}\bullet P_{B}=E^2/m-(-m*(E^2/m^2-1))=2E^2/m-m=E'\).
+
+\subsection{\#16c}
+Classically we would expect A to see a kinetic energy of \(4E=120GeV\) but relativistically we would expect \(T'+m=2*(T+m)^2/m-m=1.92TeV\).  So there is a 16 fold increase in collision energy!
+
+
+
+
+
+
+
+\end{document}

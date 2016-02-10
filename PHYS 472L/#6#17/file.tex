@@ -1,0 +1,18 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{amssymb}
+\usepackage{fullpage}
+\author{Parker Whaley}
+\title{PHYS 472L \#6\#17}
+\begin{document}
+
+\maketitle
+
+\section{\#6}
+Using \(\vec{\beta}=\vec{x}\) by re-scaling our velocities to units of c and with \(\gamma=\frac{1}{\sqrt[]{1-\vec{\beta}^2}}\) we can construct our four velocity as \(u^\mu=(\gamma,\gamma\vec{\beta})\).  Now that we have our 4-vector velocity we can take the \(\frac{d}{d\tau}\) witch we recall \(d\tau^2=dt^2-\vec{dx}^2=dt^2(1-\vec{\beta}^2)\Longleftrightarrow\frac{d}{d\tau}=\gamma\frac{d}{dt}\).  Now we can calculate \(\alpha^\mu=\frac{d}{d\tau}u^\mu=\gamma\frac{d}{dt}[\gamma(1,\vec{\beta})]=\gamma\frac{d\gamma}{dt}(1,\vec{\beta})+\gamma^2\frac{d}{dt}[(1,\vec{\beta})]\) so we need to understand what \(\frac{d\gamma}{dt}\) is.  This is simply a chain rule problem and we get \(\frac{d\gamma}{dt}=-\frac{1}{2(1-\vec{\beta}^2)^\frac{3}{2}}(-2)(\vec{\beta}\bullet\vec{a})=\gamma^3(\vec{\beta}\bullet\vec{a})\).  So \(\alpha^\mu=\gamma^2(0,\vec{a})+(1,\vec{\beta})\gamma^4(\vec{\beta}\bullet\vec{a})\).  Now that we have \(\alpha^\mu\) let's verify that \(\alpha^\mu u_\mu=0\) we see that \(\alpha^\mu u_\mu=\gamma^3 (0,\vec{a})\bullet(1,\vec{\beta})+\gamma^5 (1,\vec{\beta})\bullet(1,\vec{\beta})(\vec{\beta}\bullet\vec{a})=\gamma^3(-\vec{a}\bullet\vec{\beta}+\gamma^2(1-\vec{\beta}^2)(\vec{\beta}\bullet\vec{a}))\) (in Tr=-2) noting that \(1-\vec{\beta}^2=\frac{1}{\gamma^2}\) we immediately see \(\alpha^\mu u_\mu=\gamma^3(-\vec{a}\bullet\vec{\beta}+\vec{a}\bullet\vec{\beta})=0\) witch verifies that the projection of acceleration onto velocity is 0.
+
+\section{\#17}
+In the S' frame the velocity of a particle is \(\beta=\tanh(\theta)\) witch would mean \(\gamma=\cosh(\theta)\) and \(\gamma\beta=\sinh(\theta)\) let us also define the direction of travel of the particle as \(\hat{x}\).  We are told that there is another frame S and in frame S frame S' is travelling in the same direction as the particle with velocity \(\beta'\) by inspection in frame S' frame S is moving with velocity \(-\beta'\hat{x}\).  Using standard rapidity as above we can define a \(\psi\) such that \(\beta'=\tanh(\psi)\) and so \(\gamma'=\cosh(\psi)\) and \(\beta'\gamma'=\sinh(\psi)\).  Let's now construct the 4-velocity of the particle in frame S' \(u^{\mu}_{S'}=(\gamma,\gamma\beta,0,0)=(\cosh(\theta),\sinh(\theta),0,0)\).  We also know how to boost a 4-velocity so we can calculate the 4-velocity in frame S \(u^{\mu}_{S}=(\gamma'u^{0}_{S'}-(-\beta'\gamma')u^{1}_{S'},\gamma'u^{1}_{S'}-(-\beta'\gamma')u^{0}_{S'},0,0)=(\cosh(\psi)\cosh(\theta)+\sinh(\psi)\sinh(\theta),\cosh(\psi)\sinh(\theta)+\sinh(\psi)\cosh(\theta),0,0)=(\cosh(\psi+\theta),\sinh(\psi+\theta),0,0)\) it is immediately apparent that the rapidity are additive, since to find the velocity of our particle in frame S we need only calculate \(\frac{u^{1}_{S}}{u^{0}_{S}}=\tanh(\psi+\theta)\).
+
+
+
+\end{document}

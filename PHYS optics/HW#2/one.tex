@@ -1,0 +1,104 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{amssymb}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\author{Parker Whaley}
+\title{PHYS 462 (optics) HW\#2}
+\begin{document}
+
+\maketitle
+
+\section{\#54}
+What is the critical angle for total internal reflection in diamond?  Looking on table 4.1 we see that diamond has a reflective index $n_i=2.417$ we will assume outside of this diamond there is a vacuum or air or some other medium with a low index of reflection $n_t=1$.  We know total internal reflection occurs as the angle of the transmitted light with respect to the normal to the plane of incidence goes to $\pi/2$.  Using the law of transmission we get\[n_i \sin(\theta_i)=n_t \sin(\theta_t)\Rightarrow \arcsin[\frac{n_t}{n_i} sin(\theta_t)]=\theta_i=28^\circ\]This is a very shallow angle of total internal reflection, so we would expect light to get into the diamond and then bounce around a lot before escaping.  This would cause a well cut diamond to take a small bit of light and radiate it in all directions.
+
+\section{\#57}
+See fig1\\\\
+We are asked to consider a fish looking upwards towards the surface.  Take the fish as looking at things in a cone of base angle $\theta$ the angle that the edge of that cone makes with the surface is then $\theta_i=\theta/2$.  We can then calculate the angle of transmission as $\sin(\theta_t)=n_i \sin(\theta_i)$ and the apparent cone (the base angle of the sky cone that gets compressed into the fish's cone as $\theta'=\theta_t*2$.  Now we need only ask what angle the fish's cone must be for the entire sky to be viable: \[\theta'=\pi\Rightarrow sin(\theta_t)=1=n_i\sin(\theta_i)\Rightarrow \theta=\theta_i*2=\arcsin(\frac{1}{n_i})*2=97^\circ\]
+So the fish sees the entire sky shrunk from a disk of $180^\circ$ to a disk of $97^\circ$ because of the angles of transmission.
+
+\section{\#65}
+We are asked to compute the angle of total polarization of reflected light.  We can re-state this as the angle at witch $r_{\mid\mid}=0$ or using equation(4.38)
+\[0=\frac{n_t}{\mu_t}\cos(\theta_i)-\frac{n_i}{\mu_i}\cos(\theta_t)\]
+We also know that:
+\[\sin(\theta_t)=\frac{n_i}{n_t}sin(\theta_i)\Rightarrow \cos(\theta_t)=\sqrt{1-\frac{n_i^2\sin^2(\theta_i)}{n_t^2}}\]
+also recall:
+\[\frac{c}{n}=\frac{1}{\sqrt{\mu\epsilon}}\Rightarrow (\frac{n_1}{n_2})^2=\frac{\mu_1\epsilon_1}{\mu_2\epsilon_2}\]
+Now we can begin reducing:
+\[0=\frac{n_t}{\mu_t}\cos(\theta_i)-\frac{n_i}{\mu_i}\cos(\theta_t)\]
+
+\[\frac{n_t}{\mu_t}=\frac{n_i}{\mu_i\cos(\theta_p)}\sqrt{1-\frac{n_i^2\sin^2(\theta_p)}{n_t^2}}\]
+
+\[(\frac{n_t\mu_i}{n_i\mu_t})^2=\frac{1}{\cos^2(\theta_p)}-\frac{n_i^2\tan^2(\theta_p)}{n_t^2}\]
+
+\[(\frac{n_t\mu_i}{n_i\mu_t})^2=1+\tan^2(\theta_p)-\frac{n_i^2\tan^2(\theta_p)}{n_t^2}\]
+
+\[\tan^2(\theta_p)=\frac{\frac{\epsilon_t\mu_i}{\epsilon_i\mu_t}-1}{1-\frac{\mu_i\epsilon_i}{\mu_t\epsilon_t}}\]
+
+\[\tan(\theta_p)=\sqrt{\frac{\epsilon_t(\epsilon_t\mu_i-\epsilon_i\mu_t)}{\epsilon_i(\mu_t\epsilon_t-\mu_i\epsilon_i)}}\]
+
+\section{\#70}
+Calculate the transmittance of normal and parallel polarized waves:\\
+(4.62-rewriting)
+\[T=\frac{\sin(\theta_i)\cos(\theta_t)}{\sin(\theta_t)\cos(\theta_i)}t^2\]
+(4.44)
+\[t_\perp=\frac{2\sin(\theta_t)\cos(\theta_i)}{\sin(\theta_i+\theta_t)}\]
+so:
+\[T_\perp=\frac{\sin(\theta_i)\cos(\theta_t)}{\sin(\theta_t)\cos(\theta_i)}\frac{4\sin^2(\theta_t)\cos^2(\theta_i)}{\sin^2(\theta_i+\theta_t)}\]
+
+\[T_\perp=\frac{4sin(\theta_i)\cos(\theta_t)\sin(\theta_t)\cos(\theta_i)}{\sin^2(\theta_i+\theta_t)}\]
+
+knowing:
+
+\[2\sin(\theta)\cos(\theta)=sin(2\theta)\]
+
+we get
+
+\[T_\perp=\frac{sin(2\theta_i)\sin(2\theta_t)}{\sin^2(\theta_i+\theta_t)}\]
+
+now compute $T_\parallel$
+\[t_\parallel=\frac{2\sin(\theta_t)\cos(\theta_i)}{\sin(\theta_i+\theta_t)\cos(\theta_i-\theta_t)}\]
+
+\[T_\parallel=\frac{\sin(\theta_i)\cos(\theta_t)}{\sin(\theta_t)\cos(\theta_i)}\frac{4\sin^2(\theta_t)\cos^2(\theta_i)}{\sin^2(\theta_i+\theta_t)\cos^2(\theta_i-\theta_t)}\]
+
+\[T_\parallel=\frac{4\sin(\theta_i)\cos(\theta_t)\sin(\theta_t)\cos(\theta_i)}{\sin^2(\theta_i+\theta_t)\cos^2(\theta_i-\theta_t)}\]
+
+\[T_\parallel=\frac{sin(2\theta_i)\sin(2\theta_t)}{\sin^2(\theta_i+\theta_t)\cos^2(\theta_i-\theta_t)}\]
+
+\section{\#71}
+Show $R_\parallel+T_\parallel=1$ and $R_\perp+T_\perp=1$.
+
+\[R_\parallel+T_\parallel=\frac{\tan^2(\theta_i-\theta_t)}{\tan^2(\theta_i+\theta_t)}+\frac{sin(2\theta_i)\sin(2\theta_t)}{\sin^2(\theta_i+\theta_t)\cos^2(\theta_i-\theta_t)}\]
+
+
+\[\theta_i-\theta_t=\alpha\]
+\[\theta_i+\theta_t=\beta\]
+\[sin(2\theta_i)\sin(2\theta_t)=4\sin(\theta_i)\cos(\theta_t)\sin(\theta_t)\cos(\theta_i)=(2\cos(\theta_i)\cos(\theta_t))*(2\sin(\theta_t)\sin(\theta_i))=\]\[(cos(\alpha)+cos(\beta))(cos(\alpha)-cos(\beta))=cos^2(\alpha)-cos^2(\beta)\]
+\[T_\parallel=\frac{cos^2(\alpha)-cos^2(\beta)}{\sin^2(\beta)\cos^2(\alpha)}\]
+
+\[cos^2(\alpha)-cos^2(\beta)=cos^2(\alpha)-cos^2(\beta)+cos^2(\alpha)*cos^2(\beta)-cos^2(\alpha)*cos^2(\beta)=(1-cos^2(\beta))cos^2(\alpha)-(1-cos^2(\alpha))cos^2(\beta)=\]
+\[sin^2(\beta)cos^2(\alpha)-sin^2(\alpha)cos^2(\beta)\]
+
+By combining the above identity and our equation for $T_\parallel$:
+\[T_\parallel=1-\frac{\tan^2(\alpha)}{\tan^2(\beta)}\]
+
+Witch if we observe the above sum of $R_\parallel+T_\parallel$ we see that the tangent ratios cancel out and we are left with 1.\\\\
+
+Now examine $R_\perp+T_\perp$:
+\[R_\perp+T_\perp=\frac{\sin^2(\alpha)}{\sin^2(\beta)}+\frac{cos^2(\alpha)-cos^2(\beta)}{\sin^2(\beta)}\]
+
+$sin(2\theta_i)\sin(2\theta_t)=cos^2(\alpha)-cos^2(\beta)$ was obtained in the previous section.
+
+\[R_\perp+T_\perp=\frac{\sin^2(\alpha)+cos^2(\alpha)-cos^2(\beta)}{\sin^2(\beta)}=\frac{1-cos^2(\beta)}{\sin^2(\beta)}=\frac{sin^2(\beta)}{\sin^2(\beta)}=1\]
+
+\section{\#78}
+See fig2
+
+
+
+
+
+
+
+
+
+\end{document}
