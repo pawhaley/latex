@@ -1,0 +1,37 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{amssymb}
+\usepackage{fullpage}
+\author{Parker Whaley}
+\title{PHYS 472L \#7\#8}
+\begin{document}
+
+\maketitle
+
+\section{\#7}
+Consider a particle travelling with a velocity of $\beta=\frac{gt}{\sqrt{1+(gt)^2}}$ take its direction of travel to be the $\hat{x}$ and that it will pass through the 4-origin.\\\\
+
+Does this particle ever surpass the speed of light?  Simply note that $\sqrt{1+(gt)^2}<gt$ therefore this fraction is always less than 1 for all t.\\\\
+
+Lets compute the 4-velocity. $\gamma^-2=1-\beta^2=\frac{1}{1+(gt)^2}$ so $\gamma=\sqrt{1+(gt)^2}$ and $\tilde{u}=(\sqrt{1+(gt)^2},gt,0,0)$.\\\\
+
+We know that $\frac{dt}{d\tau}=u^0\Rightarrow \tau=\int\frac{1}{\sqrt{1+(gt)^2}}dt$ now take $gt=sinh(\phi)$ so $\tau=\int \frac{\cosh(\phi)}{g\cosh(\phi)}d\phi=arcsinh(gt)/g$ (c is eliminated by IC).  We can easily calculate $x(t)=\int \beta dt=\sqrt{1+(gt)^2}/g-1$ (-1 is the constant that fulfils the IC).  $x(t)=\cosh(g\tau)/g-1$\\\\
+
+Lets find the 4-acceleration via $\gamma\frac{du}{dt}=\gamma(\frac{g^2t}{\sqrt{1+(gt)^2}},g,0,0)=(g^2t,g\sqrt{1+(gt)^2},0,0)$.  Exactly what we got when we took the pure $\frac{du}{d\tau}$.\\
+
+\section{\#8}
+Since in a particles instantaneous rest frame u=(1,0,0,0) and we know that $\alpha\bullet u=0$ we see that $\alpha=(0,a,0,0)$\\\\
+
+In all frames the projection $u\bullet\alpha=0$.  So if we know u and one component of $\alpha$, say $\alpha^0$ we know $\alpha^0u^0/u^1=\alpha^1$.  Also the self projection of $\alpha$ onto itself must be constant, and originally this is $a^2$ so $(\alpha^0)^2+a^2=(\alpha^1)^2$\\\\
+
+This is similar to my statement above $\alpha^0u^0/\alpha^1=u^1$.\\\\
+
+$u\bullet u=1$ (Tr=-2)  (need to do proofs hw but can you show me where I went wrong???)
+
+%In a particles frame it is undergoing uniform acceleration, this must mean that $dv=adt$ in its frame, however in other frames we can generalize $dt$ as $d\tau$.
+
+
+
+
+%We still need to make dv frame independent.  Consider a frame, velocity v' relative to the particle in the direction of the particles travel, watching this particle undergo a dv in its frame.  What change in velocity of the particle in this frame?  $v' + dv'=\frac{v'+dv}{1+v'dv}$ combining $dv'=\frac{v'+ad\tau}{1+av'd\tau}$  a taylor expansion on $\frac{1}{1+av'd\tau}=1-av'd\tau+O(d\tau^2)$ let us drop terms of order $d\tau^2$ or higher $v'+dv'=v'+ad\tau-av'^2d\tau \Rightarrow dv'=ad\tau(1-v'^2)$
+
+\end{document}
