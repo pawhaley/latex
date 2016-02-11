@@ -2,12 +2,28 @@
 \usepackage{amssymb}
 \usepackage{fullpage}
 \usepackage{graphicx}
+\usepackage{amsmath}
 \author{Parker Whaley}
 \title{PHYS 351 \#4}
 \begin{document}
 \maketitle
 
-Suppose that we have some idealized elastic substance that can stretch in one dimension. (We don’t worry about the volume of the material.) Let it have the equation of state $F=bT[\frac{L}{L_0}-(\frac{L_0}{L})^2]$ here $F$ is the force of tension, b is a positive constant, and the length $L_0$ at zero tension is a function only of the temperature $T$.  Calculate the amount of work required to compress the substance isothermally and  reversibly from $L = L_0$ to $L = \frac{1}{2}L_0$
+\section{Q1}
+
+Suppose that we have some idealized elastic substance that can stretch in one dimension. (We don’t worry about the volume of the material.) Let it have the equation of state $F=bT[\frac{L}{L_0}-(\frac{L_0}{L})^2]$ here $F$ is the force of tension, b is a positive constant, and the length $L_0$ at zero tension is a function only of the temperature $T$.  Calculate the amount of work required to compress the substance isothermally and  reversibly from $L = L_0$ to $L = \frac{1}{2}L_0$\\\\
+
+We are given that the process will occure under isothermal conditions thus T is a constant in all of our intermidiate states.  If L is taken to be the extension of the system $dL$ is a small increase in that quantity, we can use this to see that F is in the opposite direction to $dL$, since F is tension.  Now that we have some information on $dL$ and force we simply note that, since we must pull agenst the tension, we put in $FdL$ work to strech the system, this gives us the sign of the work done on the system $dw=FdL$.  As a sanity check we note that for large L ($L\gg L_0$), F is positive so $FdL$ will also be positive, meaning that when the rod is streched it takes work to streach it furthur.  Also consider L beeing small ($L\ll L_0$), in this case F is negative so $FdL$ will be negative, in other words when the system is compressed it will do work on the enviroment if we allow it to expand.\\\\
+
+Now we simply evaluate the integral of work:
+\[w=\int_{path}dw=\int_{L_0}^{L_0/2}FdL=\int_{L_0}^{L_0/2}bT[\frac{L}{L_0}-(\frac{L_0}{L})^2]dL=bTL_0[\frac{L^2}{2 L_0^2}+\frac{L_0}{L}]\mid_{L_0}^{L_0/2}=\frac{5}{8}bTL_0\]
+
+\section{Q2}
+
+For temperatures above their Curie point, most paramagnetic salts obey Curie’s law, with a magnetic susceptibility $\chi_m = b/T$, where b is a constant and T is the (absolute) temperature. The (dimensionless) magnetic susceptibility $\chi_m$ is the ratio of the magnetization M to the magnetic field H; the magnetic induction is $B = \mu_0(H + M)$. We have a sample of volume $V = 10^{-5} m^3$ of a salt with b = 0.19. As we showed in class, the element of work for a magnetic system is $dW = \vec{B} \bullet d\vec{M}dV$.  Calculate the amount of work needed to magnetize the sample at 4.2 K in a magnetic induction that increases uniformly from zero to B = 1 T; you may assume that the conditions are uniform across the sample.\\\\
+
+This is relatively straitfoward, we will assume the the process is isothermal so T and therfore $\chi_m$ are constant.  Now we see that $B=\mu_0M(\frac{1}{\chi_0}+1)$ and so $dM=\frac{dB}{\mu_0(\frac{1}{\chi_0}+1)}$.  Also we note that the system is expressed by a scalar magnetic suseptability and so we will assume that $\vec{B}\parallel\vec{M}$ and so $d\vec{B}\parallel d\vec{M}$ since this feald is increasing uniformly $\vec{B}\parallel d\vec{B} \parallel d\vec{M}$ thus $\vec{B} \bullet d\vec{M}=BdM$.  We also know that conditions are uniform across the sample so evrything may be pulled out of the dV integral when we integrate our work element.  We are now ready to calculate work done on the system:
+\[w=\iint\frac{BdBdV}{\mu_0(\frac{1}{\chi_0}+1)}=V\int_0^{B_f}\frac{BdB}{\mu_0(\frac{1}{\chi_0}+1)}=\frac{(B_f)^2V}{2\mu_0(\frac{1}{\chi_0}+1)}\]
+Now we need only plug in some values, $\mu_0=4\pi*10^{-7}N/A^2$, $T=4.2K$, $b=.19K$, $B_f=1T$ careful unit inspection shows that these units will give us a energy in jules.  Plugging in we get w=.17j.
 
 
 \end{document}
