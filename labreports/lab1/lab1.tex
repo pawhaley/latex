@@ -9,11 +9,11 @@
 \maketitle
 
 \section{Abstract}
-This experament was conducted to determine the speed of light for various wevelengths of light in glass.  We did this by using a triangular prisim made of glass.
+This experiment was conducted to determine the speed of light for various wavelengths of light in glass.  We did this by using a triangular prism made of glass.
 
 \section{Tabulation of data}
 \subsection{Triangle Apex Angle}
-These are the mesured angles of reflection, there were two vewing windows one next to the bar code and another, they are denoted accordingly.  The uncertenty in our mesures of the angles was $\delta\theta=1'$\\
+These are the measured angles of reflection, there were two viewing windows one next to the bar code and another, they are denoted accordingly.  The uncertainty in our measures of the angles was $\delta\theta=1'$\\
 \begin{tabular}{| l | l | l |}
 \hline
   & $\theta_{bar}$ & $\theta_{\circ}$\\
@@ -35,7 +35,7 @@ $\theta_c$ & $\theta_d$\\
 
 \end{tabular}
 \subsection{Divergence in Angle}
-Here I have tabulated the minimum divergence of the light beeing transmitted thrught the prisim.  Eghther divergence from 0 in the case of $\phi_{bar}$ or divergence from 180 in the case of $\phi_\circ$.  Note that as before all angles carry the same uncertenty $\delta\phi=.5'$.  The last entry is the average of the two deviations $\phi_{ave}=\frac{\phi_{bar}+\phi_{\circ}-180}{2}$ and carrys a uncertenty of $\delta\phi_{ave}=2^{-3/2}$.
+Here I have tabulated the minimum divergence of the light being transmitted through the prism.  Ether divergence from 0 in the case of $\phi_{bar}$ or divergence from 180 in the case of $\phi_\circ$.  Note that as before all angles carry the same uncertainty $\delta\phi=.5'$.  The last entry is the average of the two deviations $\phi_{ave}=\frac{\phi_{bar}+\phi_{\circ}-180}{2}$ and carries a uncertainty of $\delta\phi_{ave}=2^{-3/2}$.
 
 \begin{tabular}{| l | l | l | l |}
 \hline
@@ -55,32 +55,75 @@ purple & $39^\circ 25'$ & $219^\circ 25'$ & $39^\circ 25'$\\
 
 \end{tabular}
 \subsection{Images}
-This is the image seen thrugh the scope of the diviation between the diferent colors in the helium spectra:\\
+This is the image seen through the scope of the deviation between the different colors in the helium spectra:\\
 \includegraphics[scale=.3]{hspec}\\
-This is the spectral intencity comming directly off the helium tube:\\
-PUT THIS IN!!!!!!!!!!
+This is the spectral intensity coming directly off the helium tube:\\
+\includegraphics[scale=.12]{int}
 
 
-\section{Analasis of Results}
-First we must determine the angle of the apex of the prisim call this angle $\alpha$, the angle between the two faces we pass the light thrugh.  We are given that this angle must be half the angle between the two reflected beams.  We can calculate this angle two ways, $\alpha=\frac{\theta_d-\theta_c}{2}$ and $\alpha=\frac{(360-\theta_a)+\theta_b}{2}$.  Lets average these two methods and use that average angle as our $\alpha$:
+\section{Analysis of Results}
+First we must determine the angle of the apex of the prism call this angle $\alpha$, the angle between the two faces we pass the light through.  We are given that this angle must be half the angle between the two reflected beams.  We can calculate this angle two ways, $\alpha=\frac{\theta_d-\theta_c}{2}$ and $\alpha=\frac{(360-\theta_a)+\theta_b}{2}$.  Lets average these two methods and use that average angle as our $\alpha$:
 \[\alpha=\frac{\theta_d-\theta_c+360-\theta_a+\theta_b}{4}\]
-We can also get the uncertenty in this angle (note all $\theta$s have the same uncertenty:
+We can also get the uncertainty in this angle (note all $\theta$s have the same uncertainty:
 \[\delta\alpha^2=\Sigma(\frac{\partial\alpha}{\partial\theta_i}*\delta\theta_i)^2=(1/16*4)\delta\theta^2=(.5')^2\]
 Also plugging in the above values for the various $\theta$s we arrive at:
 \[\alpha=60^\circ 2'\pm .5'\]
 I am given the equation for the index of refraction as:
 \[n=\frac{\sin((\phi+\alpha)/2)}{\sin(\alpha/2)}\]
-We can do normal uncertenty analasis procedure as done with $\alpha$ above to find the uncertenty in n:
-\[\]
+We can do normal uncertainty analysis procedure as done with $\alpha$ above to find the uncertainty in n:
+\[\delta n^2=(\frac{\cos((\phi+\alpha)/2)}{2\sin(\alpha/2)}\delta\phi)^2+(\frac{\cos((\phi+\alpha)/2)\sin(\alpha/2)-\sin((\phi+\alpha)/2)\cos(\alpha/2)}{2\sin^2(\alpha/2)}\delta\alpha)^2\]
+Plugging into octave to get the results:\\
+\begin{tabular}{| l | l | l |}
+\hline
+color & $n$ & $\delta n$\\
+\hline
+yellow & 1.5165 & 1.719e-4\\
+\hline
+blue & 1.5233 & 1.1814e-4\\
+\hline
+green & 1.5206 & 1.1777e-4\\
+\hline
+red & 1.5138 & 1.1682e-4\\
+\hline
+purple & 1.5251 & 1.1840e-4\\
+\hline
+
+
+\end{tabular}\\\\
+Wavelengths of the helium spectra from \\
+"http://hyperphysics.phy-astr.gsu.edu/hbase/quantum/atspect.html":\\
+\begin{tabular}{| l | l |}
+\hline
+color & $\lambda$ (nm)\\
+\hline
+yellow & 501.567\\
+\hline
+blue & 471.314\\
+\hline
+green & 492.193\\
+\hline
+red & 587.562\\
+\hline
+purple & 447.148\\
+\hline
+
+
+
+
+\end{tabular}\\\\\\\\\\
+
+Now we are asked to consider the relationship:
+
+\includegraphics[scale=.3]{plot}
 
 
 
 
 
+This plot shows a fairly linear relationship between the inverse square wavelength and the inverse of the difference $n^2-1$.  Y-intersect=8.0483e-1 slope=-1.0091e4.
 
-
-
-
+\section{discussion}
+These results are reasonable since n is bigger than 1 (v<c).  I would expect we are working with crown glass since tables show it has a refractive index of 1.52.
 
 
 
