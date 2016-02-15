@@ -1,0 +1,92 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{amssymb}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\author{Parker Whaley}
+\title{PHYS 472L \#19\#20}
+\begin{document}
+
+\maketitle
+\section{\#19}
+\subsection{a}
+Let's consider the Lorentz invariant (ESC) $F^{\mu \nu}F_{\nu \nu}=F^{\mu \nu}F^{\pi \tau}g_{\mu \pi}g_{\nu \tau}$.  Breaking ESC we note that g has only diagonal terms and so we get a free $\delta_{\mu \pi}$ and $\delta_{\nu \tau}$ so $\sum F^{\mu \nu}F^{\pi \tau}g_{\mu \pi}g_{\nu \tau}\delta_{\mu \pi}\delta_{\nu \tau}=\sum (F^{\mu \nu})^2g_{\mu \mu}g_{\nu \nu}$.  Using $Tr=-2$ convention g is only 1 for the time components and -1 for the space components so we can quickly evaluate the above statement to $2\vec{E}^2-2\vec{B}^2$.  Decide by 2 and we conclude $\vec{E}^2-\vec{B}^2$ is a invariant.\\
+
+If there were a frame where $\vec{E}$ vanished we would know $\vec{E}^2-\vec{B}^2<0\Rightarrow \vec{E}^2<\vec{B}^2$ in all frames.
+\subsection{b}
+For this work in analogy to the previous question examining the self projection of $F^{\mu \nu}G_{\nu \nu}=F^{\mu \nu}G^{\pi \tau}g_{\mu \pi}g_{\nu \tau}$.  (copy and paste the above arguments) We see immediately that we have the invariant $\sum F^{\mu \nu}G^{\mu \nu}g_{\mu \mu}g_{\nu \nu}$.  Witch then gives us $4 \vec{E}\bullet\vec{B}$ (same argument about the sign effect of g then notice we have 4 copies of $E_d*B_d$).  Now we have our Lorenz invariant $\vec{E}\bullet\vec{B}$.\\
+
+If there were a frame where $\vec{E}$ or $\vec{B}$ vanished then in all frames $\vec{E}\bullet\vec{B}=0$ witch would mean $\vec{E}$ and $\vec{B}$ are perpendicular.
+\subsection{c}
+Well we demonstrated in class that G's self projection does not yield another invariant.  So I can't see how we would arrive at any more invariants.
+
+\section{\#20}
+\subsection{a}
+The EM tensor (Faraday) in Tr=-2 is:
+\[
+F^{\mu\nu}=
+\begin{bmatrix}
+0 & E_x & E_y & E_z\\
+-E_x & 0 & B_z & -B_y\\
+-E_y & -B_z & 0 & B_x\\
+-E_z & B_y & -B_x & 0\\
+\end{bmatrix}
+\]
+In our boosted frame $F^{\mu'\nu'}=\bigwedge^{\mu'}_{\mu}\bigwedge^{\nu'}_{\nu}F^{\mu\nu}$ and $\bigwedge^{\nu'}_{\nu}F^{\mu\nu}=F^{\mu\nu'}=$
+\[
+\begin{bmatrix}
+\gamma\beta E_x & \gamma E_x & \gamma E_y-\gamma \beta B_z & \gamma E_z+\gamma \beta B_y\\
+-\gamma E_x & -\gamma \beta E_x & -\gamma \beta E_y-\gamma B_z & -\gamma\beta E_z-\gamma B_y\\
+-E_y & -B_z & 0 & B_x\\
+-E_z & B_y & -B_x & 0\\
+\end{bmatrix}
+\]
+After applying $\bigwedge^{\mu'}_{\mu}F^{\mu\nu'}=F^{\mu'\nu'}=$
+\[
+\begin{bmatrix}
+0 & \gamma^2 E_x(1-\beta^2) & \gamma E_y-\gamma \beta B_z & \gamma E_z+\gamma \beta B_y\\
+-\gamma^2 E_x(1-\beta^2) & 0 & -\gamma \beta E_y-\gamma B_z & -\gamma\beta E_z-\gamma B_y\\
+-\gamma E_y+\gamma \beta B_z & \gamma \beta E_y+\gamma B_z & 0 & B_x\\
+-\gamma E_z-\gamma \beta B_y & \gamma\beta E_z+\gamma B_y & -B_x & 0\\
+\end{bmatrix}
+\]
+
+Noting that $1-\beta^2=1/\gamma^2$ we see that the statements in the assignment hold.
+
+
+\subsection{b}
+Now let us take the direction of boost as the normal to the plane containing the E field and the B field.  Find the boost that paralyses the E and B fields, in other words $E'\times B'=0$.  This means 
+\[E_{y'}B_{z'}=E_{z'}B_{y'}\]
+\[(E_y-\beta B_z)(B_z-\beta E_y)=(E_z+\beta B_y)(B_y+\beta E_z)\]
+\[E_yB_z-\beta (E_y^2+B_z^2)+\beta^2B_zE_y=E_zB_y+\beta (E_z^2+B_y^2)+\beta^2B_yE_z\]
+\[\Rightarrow (E\times B)\bullet \hat{x}=E_yB_z-E_zB_y\Leftarrow\]
+\[(1+\beta^2)(E\times B)\bullet \hat{x}=\beta(E\bullet E+B\bullet B)\]
+\[C=-\frac{(E\bullet E+B\bullet B)}{(E\times B)\bullet \hat{x}}\]
+\[\beta^2+C\beta +1=0\]
+\[\beta=\frac{-C\pm \sqrt{C^2-4}}{2}\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

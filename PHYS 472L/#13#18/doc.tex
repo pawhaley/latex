@@ -1,0 +1,55 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{amssymb}
+\usepackage{fullpage}
+\author{Parker Whaley}
+\title{PHYS 472L \#13\#18}
+\begin{document}
+
+\maketitle
+
+\section{\#13}
+\subsection{Newtonian}
+In a Newtonian system we see that momentum must be conserved so if in the instantaneous rest frame the rocket ejects a mass dm with a momentum udm it must adopt the momentum dp=-udm.  in other words mdv=-udm or \[v=\int_{m_0}^m-u/m dm=u*ln(m)\mid_{m_0}^m=u*ln(m_0/m)\]
+\subsection{relativistic}
+(take all interactions to be along the $\hat{x}$ axis)\\\\
+In relativistic mechanics in the instantaneous rest frame of the rocket the rocket ejects the fuel of mass $\delta m$ with 4-velocity $(\gamma',\gamma'u)$ where u is the velocity of the fuel and 4-momentum $\delta m(\gamma',\gamma'u)$ Consider that the rocket must have started at rest in this frame and then has some velocity.  We see by conservation of relativistic momentum $(M,0)=M'(\gamma,\gamma dv)+\delta m(\gamma',\gamma'u)$.  Let's calculate dv, $M'\gamma dv=-\delta m \gamma'u\Rightarrow \delta m=-M'\frac{\gamma dv}{\gamma'u}$.  Now $M=M'\gamma+\delta m\gamma'$ becomes $M=M'\gamma-M'\frac{\gamma dv}{\gamma'u}\gamma'\Rightarrow M=M'\gamma(1-\frac{dv}{u})\Rightarrow M\frac{\sqrt{1-dv^2}}{1-dv/u}=M'$ doing a Taylor expansion and eliminating higher order terms in dv we end up at $dv=\frac{u}{M}dM$.
+
+
+
+In our lab frame this dv causes a change in the rockets velocity $v'+dv'=\frac{v'+dv}{1+v'dv}=(v'+dv)*(1-v'dv+O(dv^2))$ witch linearisation yields: $dv'=(1-v'^2)\frac{u}{M}dM$.  Now we need only integrate over our change in velocity \[\int_{M_0}^{M}\frac{u}{M}dM=\int^{v_f}_{0}\frac{1}{(1-v'^2)}dv'\]After calculus \[v_f=\tanh(-u\ln(M_0/M))\]
+
+\subsection{relativistic mass conservation}
+Consider a frame that the rocket is at rest in that watches the rocket move in the $\hat{x}$ for a bit and sees all of the ejected fuel moving in the $-\hat{x}$ direction.  We immediately note that there is more kinetic energy then there was initially so by conservation of the first terms of the four momentums -the terms that are equivalent to M+T we see that $\sum M=\sum M'+\sum T'$ since some T' are not 0 the sum of masses must have changed.  Mass can not be conserved.
+
+\section{\#18}
+
+In all frames $P\bullet P=(P^1)^2+p^2$ in this lab the energy of the particle $P^1$ is given by the first quantity of the particles 4-momentum, witch can be obtained in a frame independent way by taking $u\bullet P=E=P^1_{lab}$ so we can now put this in for the energy we get $P\bullet P=(u\bullet P)^2 +p^2$ so $p=\sqrt{P\bullet P -(u\bullet P)^2}$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
