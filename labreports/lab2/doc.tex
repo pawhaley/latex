@@ -6,16 +6,16 @@
 \title{lab \#2}
 \begin{document}
 \maketitle
-\section{Mesured Data}
-We first attempted to get the focal length of the two lenses.  While doing this we recorded two positions of each instrument each with a uncertenty of .1cm this gives the average an uncertenty of $\delta=.1/\sqrt{2}$.\\
+\section{Measured Data}
+We first attempted to get the focal length of the two lenses.  While doing this we recorded two positions of each instrument each with a uncertainty of .1cm this gives the average an uncertainty of $\delta=.1/\sqrt{2}$.\\
 
-We mesured the position of the sourse as $ave(14.55cm, 18.45cm)=16.5cm \pm \delta$.\\
+We measured the position of the source as $ave(14.55cm, 18.45cm)=16.5cm \pm \delta$.\\
 
-Next we set up our experament to mesure the focal lengths of the two lenses.  Below are the average distances (uncertenty $\delta$) to the mirror and the range of screen positions that focused $P_l$ to $P_h$.  We will not consider the uncertenty from the instrument's mesurements for these last two as the uncertenty we had in where they focused is much higher as shown below (order of mm vs cm).\\
+Next we set up our experiment to measure the focal lengths of the two lenses.  Below are the average distances (uncertainty $\delta$) to the mirror and the range of screen positions that focused $P_l$ to $P_h$.  We will not consider the uncertainty from the instrument's measurements for these last two as the uncertainty we had in where they focused is much higher as shown below (order of mm vs cm).\\
 
 \begin{tabular}{| l | l | l | l | l | l |}
 \hline
- & lense & $P_l$ & $P_h$ & $P$ & $\delta P$\\
+ & lens & $P_l$ & $P_h$ & $P$ & $\delta P$\\
 \hline
 L1 & 37.55 & 149.45 & 159.25 & 154.35 & 4.9\\
 \hline
@@ -27,7 +27,7 @@ L2 & 37.55 & 148.25 & 158.55 & 153.4 & 5.15\\
 \hline
 \end{tabular}\\
 
-We then mesured the distance to a virtual image.  To do this we calibrated the focus of a camera so that it focused in the range (59.675, 66.025).  Wich gives us a focus at $62.85\pm3.175$.  We then positioned the lense at various positions and mesured the distance to the virtual image formed by lense one.  The range in these mesurements is denoted $C_l$ to $C_h$.  Note that L has the previously described uncertenty $\delta$.\\
+We then measured the distance to a virtual image.  To do this we calibrated the focus of a camera so that it focused in the range (59.675, 66.025).  Witch gives us a focus at $62.85\pm3.175$.  We then positioned the lens at various positions and measured the distance to the virtual image formed by lens one.  The range in these measurements is denoted $C_l$ to $C_h$.  Note that L has the previously described uncertainty $\delta$.\\
 
 \begin{tabular}{| l | l | l | l | l |}
 \hline
@@ -41,7 +41,7 @@ L & $C_l$ & $C_h$ & C & $\delta C$\\
 \hline
 \end{tabular}\\
 
-Finaly we positiond lense one neer the sourse then lense two and finaly the screen.  We set the positions of the lenses then experamentaly determind the distance where the image on the screen came into focus.  All of the set mesurements come with uncertenty $\delta$ the experamental vlaue has experamentaly determined uncertenty.\\
+Finally we positioned lens one near the source then lens two and finally the screen.  We set the positions of the lenses then experimentally determined the distance where the image on the screen came into focus.  All of the set measurements come with uncertainty $\delta$ the experimental value has experimentally determined uncertainty.\\
 
 \begin{tabular}{| l | l | l | l | l | l |}
 \hline
@@ -54,9 +54,19 @@ $L_1$ & $L_2$ & $S_l$ & $S_h$ & S & $\delta S$\\
 
 \end{tabular}
 
+\section{Lens behaviour}
+Here I plotted $s_0^{-1}$ is the lens position minus the source position vs. $s_i^{-1}$ witch is the screen position minus the the lens position.\\
+\includegraphics[scale=.35]{l1.png}
+\includegraphics[scale=.35]{l2.png}\\
 
+One point is not enough to get a line so I will instead do uncertainty analysis to get the focal length 
+\[f=1/2((\frac{1}{L1-d}+\frac{1}{P1-L1})^{-1}+(\frac{1}{L2-d}+\frac{1}{P2-L2})^{-1})\]
+Where d is the position of the source L (L1 and L2 describe the two separate measurements) is the lens position and P is the position of the screen. note that the uncertainty in everything except P is $\delta$ described above. Let us note that the uncertainties in everything other than P are so minuscule that they can be considered negligible, they are almost two orders smaller.  We then get:
+\[\delta f^2=(1/2*\frac{1}{((\frac{1}{L1-d}+\frac{1}{P1-L1})(P1-L1))^2}*\delta P1)^2+(1/2*\frac{1}{((\frac{1}{L2-d}+\frac{1}{P2-L2})(P2-L2))^2}*\delta P2)^2\]
+We then get $f_1=17.919 \pm 0.70711cm$ and$f_2=17.803\pm0.70711cm$.  These seem reasonable since in lab we eye balled the focal length at about 18cm.
 
-
+\section{additional discussion}
+These results seem physically reasonable, We were able to show that the focal length was a reasonable 17cm.  As discussed the errors were different for the two different measurements for each lens.
 
 
 
