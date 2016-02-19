@@ -8,8 +8,31 @@
 \maketitle
 
 \section{Q1}
-Show that the sum of two odd integers is even.\\
+Theorem.\\
+The sum of two odd integers is even.\\
+Proof.\\\\
+Suppose A and B are odd integers.  This means by definition $2\nmid A$ and $2\nmid B$.  There exists a maximum integer k such that $k*2\le A$.  We note that since $2\nmid A$ it must follow that $k*2\neq A$.  Note that $k*2< A$ but that $(k+1)*2>A$ by our construction of k.  We have thus bounded A as $k*2<A<k*2+2$, note that there is only one integer in this range thus $A=k*2+1$.\\\\
+There exists a maximum integer j such that $j*2\le B$.  We note that since $2\nmid B$ it must follow that $j*2\neq B$.  Note that $j*2< B$ but that $(j+1)*2>B$ by our construction of $j$.  We have thus bounded B as $j*2<B<j*2+2$, note that there is only one integer in this range thus $B=j*2+1$.\\\\
+Now we note that $A+B=2*k+1+2*j+1=2*k+2*j+2=2*(k+j+1)$.  We immediately note that $(k+j+1)$ is an integer and thus by definition $2\mid (A+B)$.  Thus by definition A+B is even. \\
+$\Box$
+	
+\section{Q2}
+Theorem.\\
+If m and n are both divisible by k then m+n is divisible by k\\
+Proof.\\\\
+Suppose m and n are both divisible by k.  Since m is divisible by k by definition there exists some integer j such that $j*k=m$.  Since n is divisible by k by definition there exists some integer $i$ such that $i*k=n$.  We note that $m+n=j*k+i*k=k*(i+j)$.  Noting that $(i+j)$ is an integer we can state by definition $m+n$ is divisible by k.\\
+$\Box$
+
+\section{Q3}
+Theorem.\\
+If n is a natural number then $15^n-8^n$ is divisible by 7.\\
 Proof.\\
+We will proceed with a proof by induction.\\\\
+Assume n=1.  Note that $15^n-8^n=15-8=7*1$.  Since 1 is an integer we conclude that $7\mid 15^n-8^n$ holds for this case.\\\\
+Suppose $7\mid 15^n-8^n$.  By definition there exist some integer, call it k, such that $7*k=15^n-8^n$.  Note that $15^{n+1}-8^{n+1}=15*15^{n}-8*8^{n}=14*15^{n}-7*8^{n}+15^{n}-8^{n}$.  We also know that $7*k=15^n-8^n$ putting this in we see that $15^{n+1}-8^{n+1}=2*7*15^{n}-7*8^{n}+7*k=7*(2*15^{n}-8^{n}+k)$.  Note that $(2*15^{n}-8^{n}+k)$ is an integer and thus by definition $7\mid15^{n+1}-8^{n+1}$.\\\\
+By induction we conclude that for n being a natural number $15^n-8^n$ is divisible by 7.\\
+$\Box$
+
 
 
 
