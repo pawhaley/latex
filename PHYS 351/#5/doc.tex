@@ -13,10 +13,16 @@ Recall that the van der Waals equation of state is $(P +\frac{a}{v^2} )(v - b) =
 the molar volume and a and b depend only on the type of gas.
 \subsection{a}
 The coefficient of thermal expansion is defined as follows:
-\[\beta \equiv \frac{1}{V}(\frac{\partial V}{\partial T})\mid_P\]
-Find $\beta$ for a van der Waals gas. Show that this reduces to the ideal gas result, $\beta_{ideal} =\frac{1}{T}$, when a = 0 and b = 0.
+\[\beta \equiv \frac{1}{V}(\frac{\partial V}{\partial T})\biggr |_P\]
+Find $\beta$ for a van der Waals gas. Show that this reduces to the ideal gas result, $\beta_{ideal} =\frac{1}{T}$, when a = 0 and b = 0.\\
 
-
+Lets start by taking a $\frac{\partial}{\partial T}$ holding P as a constant.  Noting that $v=V/n$ we begin taking a implicit derivative on boath sides.
+\[\frac{\partial}{\partial T}(P +\frac{an^2}{V^2} )(V/n - b) = \frac{\partial}{\partial T}RT\]
+\[(\frac{-2an^2}{V^3}\frac{\partial V}{\partial T}\biggr |_P )(V/n - b)+(P +\frac{an^2}{V^2} )(1/n\frac{\partial V}{\partial T}\biggr |_P) = R\]
+\[\frac{\partial V}{\partial T}\biggr |_P =\frac{R}{(\frac{-2an^2}{V^3})(V/n - b)+(P +\frac{an^2}{V^2} )(1/n)}\]
+\[\frac{\partial V}{\partial T}\biggr |_P =\frac{Rv^2V}{(-2a)(v - b)+(P +a )(v)}=  \frac{Rv^2V}{2ab+(P-a)v}\]
+\[\beta=\frac{Rv^2}{2ab+(P-a)v}\]
+(Cool $\beta$ is size independent, not dependent on V)
 
 
 
