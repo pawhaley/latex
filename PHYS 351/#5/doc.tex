@@ -20,10 +20,35 @@ Lets start by taking a $\frac{\partial}{\partial T}$ holding P as a constant.  N
 \[\frac{\partial}{\partial T}(P +\frac{an^2}{V^2} )(V/n - b) = \frac{\partial}{\partial T}RT\]
 \[(\frac{-2an^2}{V^3}\frac{\partial V}{\partial T}\biggr |_P )(V/n - b)+(P +\frac{an^2}{V^2} )(1/n\frac{\partial V}{\partial T}\biggr |_P) = R\]
 \[\frac{\partial V}{\partial T}\biggr |_P =\frac{R}{(\frac{-2an^2}{V^3})(V/n - b)+(P +\frac{an^2}{V^2} )(1/n)}\]
-\[\frac{\partial V}{\partial T}\biggr |_P =\frac{Rv^2V}{(-2a)(v - b)+(P +a )(v)}=  \frac{Rv^2V}{2ab+(P-a)v}\]
-\[\beta=\frac{Rv^2}{2ab+(P-a)v}\]
-(Cool $\beta$ is size independent, not dependent on V)
+\[\frac{\partial V}{\partial T}\biggr |_P =\frac{Rv^2V}{(-2a)(v - b)+(Pv^2 +a )(v)}=  \frac{Rv^2V}{2ab+(Pv^2-a)v}\]
+\[\beta=\frac{Rv^2}{2ab-av+Pv^3}\]
+(Cool $\beta$ is size independent, not dependent on V)  If we take the ideal gass limit (a=0 b=0) we get:
+\[\beta=\frac{R}{Pv}\]
+Noting that Pv=RT we see imeadiately:
+\[\beta=\frac{1}{T}\]
+Verifing the expected value for an ideal gas.
+\subsection{b}
+The coefficient of compression is defined as follows:
+\[\kappa \equiv -\frac{1}{V}(\frac{\partial V}{\partial P})\biggr |_T\]
+Find $\kappa$ for a van der Waals gas. Show that this reduces to the ideal gas result, $\kappa_{ideal} =\frac{1}{P}$, when $a = 0$ and $b = 0$.\\
 
+Lets start by taking a $\frac{\partial}{\partial P}$ holding T as a constant.  Noting that $v=V/n$ we begin taking a implicit derivative on boath sides.
+\[\frac{\partial}{\partial P}(P +\frac{an^2}{V^2} )(V/n - b) = \frac{\partial}{\partial P}RT\]
+\[(1 +\frac{-2an^2}{V^3}\frac{\partial V}{\partial P}\biggr |_T )(V/n - b) + (P +\frac{an^2}{V^2} )(1/n\frac{\partial V}{\partial P}\biggr |_T) = 0\]
+\[(1 +\frac{2a}{v^2}\kappa )(v - b) - (P +\frac{a}{v^2} )(v\kappa) = 0\]
+\[2a\kappa (v - b) - (Pv^2 +a )(v\kappa) = (b - v)v^2\]
+\[\kappa = \frac{(v - b)v^2}{ 2ab + Pv^3 -av }\]
+
+This term is also size independent.  We note that as a and b become 0 the above becomes $\kappa_{ideal} =\frac{1}{P}$.
+\section{Q2}
+We have an elastic band. The Young’s modulus $Y$ is defined by the linear relation
+between a differential change in length, $dL$, that results from the application of a
+differential increment of force, $dF$: $dF =\frac{YA}{L_\circ}dL$, where the length is $L_\circ$ when no
+force is applied, and the cross-sectional area is A.
+\subsection{a}
+Let the tension on the band be increased quasi-statically from $T_1$ to $T_2$. Calculate
+the work done on the band, assuming that the cross-section does not change
+appreciably.\\
 
 
 
