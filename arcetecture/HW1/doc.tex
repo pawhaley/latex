@@ -1,0 +1,31 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{amssymb}
+\usepackage{fullpage}
+\usepackage{amsmath}
+\author{Parker Whaley}
+\title{CS 441 A2}
+\begin{document}
+\maketitle
+\begin{tabular}{| c | c | c | c |}
+\hline
+& Asteroids Only & Asteroids + Image & Full Code\\
+\hline
+Sequential & 24990.2 ns & 25610 ns & 27300 ns\\
+\hline
+OpenMP & 3930.41 ns & 4575.33 ns & 5228.27 ns\\
+\hline
+CUDA &  &  & \\
+\hline
+
+
+\end{tabular}\\\\
+
+In OpenMP I optimized by making a array of closest approches that way the code did not need to acess the same data itom from each of its open mp threads.  This resulted in the total time coming down from 8244ns to 5229ns.\\
+
+I've included my CUDA code but whenever I try running it netrun has problems.  See screenshot.\\
+
+
+closest approach: 1.34645e+06
+
+
+\end{document}
