@@ -16,23 +16,23 @@ The coefficient of thermal expansion is defined as follows:
 \[\beta \equiv \frac{1}{V}(\frac{\partial V}{\partial T})\biggr |_P\]
 Find $\beta$ for a van der Waals gas. Show that this reduces to the ideal gas result, $\beta_{ideal} =\frac{1}{T}$, when a = 0 and b = 0.\\
 
-Lets start by taking a $\frac{\partial}{\partial T}$ holding P as a constant.  Noting that $v=V/n$ we begin taking a implicit derivative on boath sides.
+Lets start by taking a $\frac{\partial}{\partial T}$ holding P as a constant.  Noting that $v=V/n$ we begin taking a implicit derivative on both sides.
 \[\frac{\partial}{\partial T}(P +\frac{an^2}{V^2} )(V/n - b) = \frac{\partial}{\partial T}RT\]
 \[(\frac{-2an^2}{V^3}\frac{\partial V}{\partial T}\biggr |_P )(V/n - b)+(P +\frac{an^2}{V^2} )(1/n\frac{\partial V}{\partial T}\biggr |_P) = R\]
 \[\frac{\partial V}{\partial T}\biggr |_P =\frac{R}{(\frac{-2an^2}{V^3})(V/n - b)+(P +\frac{an^2}{V^2} )(1/n)}\]
 \[\frac{\partial V}{\partial T}\biggr |_P =\frac{Rv^2V}{(-2a)(v - b)+(Pv^2 +a )(v)}=  \frac{Rv^2V}{2ab+(Pv^2-a)v}\]
 \[\beta=\frac{Rv^2}{2ab-av+Pv^3}\]
-(Cool $\beta$ is size independent, not dependent on V)  If we take the ideal gass limit (a=0 b=0) we get:
+(Cool $\beta$ is size independent, not dependent on V)  If we take the ideal gas limit (a=0 b=0) we get:
 \[\beta=\frac{R}{Pv}\]
-Noting that Pv=RT we see imeadiately:
+Noting that Pv=RT we see immediately:
 \[\beta=\frac{1}{T}\]
-Verifing the expected value for an ideal gas.
+Verifying the expected value for an ideal gas.
 \subsection{b}
 The coefficient of compression is defined as follows:
 \[\kappa \equiv -\frac{1}{V}(\frac{\partial V}{\partial P})\biggr |_T\]
 Find $\kappa$ for a van der Waals gas. Show that this reduces to the ideal gas result, $\kappa_{ideal} =\frac{1}{P}$, when $a = 0$ and $b = 0$.\\
 
-Lets start by taking a $\frac{\partial}{\partial P}$ holding T as a constant.  Noting that $v=V/n$ we begin taking a implicit derivative on boath sides.
+Lets start by taking a $\frac{\partial}{\partial P}$ holding T as a constant.  Noting that $v=V/n$ we begin taking a implicit derivative on both sides.
 \[\frac{\partial}{\partial P}(P +\frac{an^2}{V^2} )(V/n - b) = \frac{\partial}{\partial P}RT\]
 \[(1 +\frac{-2an^2}{V^3}\frac{\partial V}{\partial P}\biggr |_T )(V/n - b) + (P +\frac{an^2}{V^2} )(1/n\frac{\partial V}{\partial P}\biggr |_T) = 0\]
 \[(1 +\frac{2a}{v^2}\kappa )(v - b) - (P +\frac{a}{v^2} )(v\kappa) = 0\]
@@ -50,6 +50,16 @@ Let the tension on the band be increased quasi-statically from $T_1$ to $T_2$. C
 the work done on the band, assuming that the cross-section does not change
 appreciably.\\
 
+Basically we are to assume that Y, A, $L_\circ$ are all constant.  this would mean that F(L) the only two variables let in the system.
+\[\int dF =\int \frac{YA}{L_\circ}dL \Longrightarrow F=\frac{YA}{L_\circ}*L+C \Longrightarrow F=\frac{YA}{L_\circ}*(L-L_\circ)\]
+The constant is determined such that at $L=L_\circ$, $F=0$.  We also know that: 
+\[dw=FdL=\frac{FL_\circ}{YA}dF\]
+We can now integrate our differential work:
+\[\int dw=\int_{T_1}^{T_2}\frac{FL_\circ}{YA}dF=\frac{F^2L_\circ}{2YA} \biggr|_{T_1}^{T_2}= \frac{((T_2)^2-(T_1)^2)L_\circ}{2YA}\]
+\subsection{b}
+Assume that the heat capacity of the elastic band does not change during the stretching process described in part (a), and assume that process occurs adiabatically. How does the temperature of the band change during the stretching process? Does this agree with observation?\\
+
+Our model has all of the energy being stored in the system, and being perfectly reversible.  We would expect no change in the temperature of the band as it is stretched as all of the energy is going into the stretching of the material.  This is different from what we observe in the laboratory as stretching and retracting a material will not be a perfectly reversible process and we will see temperature increase.
 
 
 
