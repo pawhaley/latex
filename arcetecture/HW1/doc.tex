@@ -14,18 +14,18 @@ Sequential & 24990.2 ns & 25610 ns & 27300 ns\\
 \hline
 OpenMP & 3930.41 ns & 4575.33 ns & 5228.27 ns\\
 \hline
-CUDA &  &  & \\
+CUDA & 43.9468 ns & 259.402 ns & 300.264 ns\\
 \hline
 
 
 \end{tabular}\\\\
 
-In OpenMP I optimized by making a array of closest approches that way the code did not need to acess the same data itom from each of its open mp threads.  This resulted in the total time coming down from 8244ns to 5229ns.\\
+In OpenMP I optimized by making a array of closest approaches that way the code did not need to access the same data item from each of its open mp threads.  This resulted in the total time coming down from 8244ns to 5229ns (both using OpenMP).\\
 
-I've included my CUDA code but whenever I try running it netrun has problems.  See screenshot.\\
+Getting CUDA to run I simply put the run step into the gpu and got a speed-up of ~3 orders of magnitude!  excellent result!\\
 
 
-closest approach: 1.34645e+06
+closest approach: 1.34645e+06.  Same for all.
 
 
 \end{document}
