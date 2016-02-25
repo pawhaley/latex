@@ -1,0 +1,34 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amssymb}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\author{Parker Whaley}
+\title{Proof HW}
+\begin{document}
+\maketitle
+\section{3.4.9(c)}
+Therum.\\
+$\sum_{k=1}^n (2k-1)=n^2$ for $n\in \mathbb{N}$\\\\
+Proof.\\
+We will procede with a proof by induction on n.\\\\
+Consider the case that $n=1$.  Note $\sum_{k=1}^n (2k-1)=(2-1)=1=1^2=n^2$.  We imeadiatly see that the predicate holds in this bace case.\\\\
+Suppose $\sum_{k=1}^n (2k-1)=n^2$ holds for some $n \in \mathbb{N}$.  Conseder the sum $\sum_{k=1}^{n+1} (2k-1)=\sum_{k=1}^{n} (2k-1)+(2(n+1)-1)=n^2+(2n+2-1)=n^2+2n+1$.  Note that $(n+1)^2=n^2+2n+1$ by foiling out $(n+1)\cdot(n+1)$.  We now see that $\sum_{k=1}^{n+1} (2k-1)=(n+1)^2$ thus if our predicate holds in the n case it must hold in the n+1 case.\\\\
+By induction on n we conclude that $\sum_{k=1}^n (2k-1)=n^2$ for $n\in \mathbb{N}$.
+\section{3.5.20}
+Therum.\\
+For $n\in \mathbb{W}$ such that $n\ge 30$ there exists a $j,k\in \mathbb{W}$ such that $n=6j+7k$.\\\\
+Proof.\\
+We will procede with a six step proof by induction.\\\\
+Consider the following cases, where we let j and k be the specified whole number values and calculate n:\\
+$j=5,k=0:6j+7k=30$\\
+$j=4,k=1:6j+7k=31$\\
+$j=3,k=2:6j+7k=32$\\
+$j=2,k=3:6j+7k=33$\\
+$j=1,k=4:6j+7k=34$\\
+$j=0,k=5:6j+7k=35$\\
+So we can say that our predicate holds in the n=30,31,32,33,34,35 cases.\\\\
+Suppose our predicate holds for some whole number n grater than 30.  This means there exist two whole numbers, lets call them j and k, such that $n=6j+7k$.  Consider $n+6=6j+7k+6=6(j+1)+7k$.  Note that j+1 and k are whole numbers.  Thus if the predicate holds for n it must hold for $n+6$.\\\\
+Since we have shown that our predicate holds for the first six cases and that if it holds in case n it holds in case n+6, we conclude by induction that it holds in all cases $n\ge 30$.
+
+
+\end{document}
