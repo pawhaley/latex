@@ -1,0 +1,38 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amssymb}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\author{Parker Whaley}
+\title{Proof HW}
+\begin{document}
+\maketitle
+\section{3.6.13}
+We are asked to consider the set of all sets, F.  We then define the $\equiv$ operator to be, for sets A and B, $A\equiv B \Leftrightarrow A\subset B \vee B\subset A$.  Is $\equiv$ a equivalence relation on F?\\
+
+No, I will demonstrate that it is not with a proof by contradiction.\\
+
+Suppose that the operator $\equiv$ is a equivalence relation.\\
+Consider the sets $A=\{ 1\}$,  $B=\{ 1,2\}$,  $C=\{ 2\}$.  Note that $A\equiv B$ since $A\subseteq B$.  Also note that $B\equiv C$ since $C\subseteq B$.  Since $\equiv$ is a equivalence relation amongst A, B, and C we can use the transitive property to say that $A\equiv B \wedge B\equiv C \rightarrow A\equiv C$.  Note that, since $A\nsubseteq C\wedge C\nsubseteq A\Rightarrow \neg(A\subseteq C\vee C\subseteq A)$, DeMorgan’s law, it must be that $A\not\equiv C$.\\
+We have thus reached a contradiction, it is not possible for $A\equiv B$ and $A\not\equiv B$ so our initial supposition that $\equiv$ is a equivalence operator must be false.
+
+\section{3.6.15}
+We are asked to consider F, the set of all non empty sets.  We define $\equiv$ to be, for sets A and B, $A\equiv B \Leftrightarrow$ $A\cap B$ is a non-empty set.  Is $\equiv$ a equivalence relation on F?\\
+
+No, I will demonstrate that it is not with a proof by contradiction.\\
+
+Suppose that the operator $\equiv$ is a equivalence relation.\\
+Consider the sets $A=\{ 1\}$,  $B=\{ 1,2\}$,  $C=\{ 2\}$.  Note that $A\equiv B$ since $A\cap B=\{ 1\}$.  Also note that $B\equiv C$ since $C\cap B=\{ 2\}$.  Since $\equiv$ is a equivalence relation amongst A, B, and C we can use the transitive property to say that $A\equiv B \wedge B\equiv C \rightarrow A\equiv C$.  Note that, since $A\cap C=\varnothing $ it must be that $A\not\equiv C$.\\
+We have thus reached a contradiction, it is not possible for $A\equiv B$ and $A\not\equiv B$ so our initial supposition that $\equiv$ is a equivalence operator must be false.
+
+\subsection{3.6.17}
+Is $\neq$ an equivalence relation on $\mathbb{R}$?\\
+
+No, I will demonstrate this with a proof by contradiction.\\
+
+Suppose $\neq$ is a equivalence relation on $\mathbb{R}$.\\
+Consider $a=0$.  Note that $a\in \mathbb{R}$.  Thus since $\neq$ is a equivalence relation and therefore must be reflexive we can say $a\neq a$.  However we know $0=0$ thus $a=a$.\\
+We have reached a contradiction it is impossible for $a\neq a$ and $a=a$.  Thus our initial supposition that $\neq$ is a equivalence relation must be false.
+
+
+
+\end{document}
