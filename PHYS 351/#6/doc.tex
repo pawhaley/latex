@@ -1,0 +1,116 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{amssymb}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\author{Parker Whaley}
+\title{PHYS 351 \#6}
+\begin{document}
+\maketitle
+\section{1}
+Suppose we have four state variables: W, X, Y , and Z. Physical states lie on a two dimensional surface in the four-dimensional space, so that e.g. we can regard any pair of variables as independent, and the other two as dependent. Define $g_Y\equiv \frac{\partial X}{\partial W}\biggr |_Y $ and $g_Z\equiv \frac{\partial X}{\partial W}\biggr |_Z$.
+\subsection{a}
+Show that in general $g_Y-g_Z=\frac{\partial X}{\partial Z}\biggr |_W \frac{\partial Z}{\partial W}\biggr |_Y$.\\
+
+First let us consider X(W,Y), this can be written since X can be uniquely determined by only two of the other 3 variables.  We can immediately see that $$dX=\frac{\partial X}{\partial W}\biggr |_Y dW+\frac{\partial X}{\partial Y}\biggr |_W dY$$.  Repeating the same process with X(W,Z) we see that dX can also be written as $$dX=\frac{\partial X}{\partial W}\biggr |_Z dW+\frac{\partial X}{\partial Z}\biggr |_W dZ$$.  Now let us consider Z(W,Y) we see that a small change in Z is proportional to changes in W and Y $$dZ=\frac{\partial Z}{\partial W}\biggr |_Y dW+\frac{\partial Z}{\partial Y}\biggr |_W dY$$.  Plugging in for dZ we see: $$dX=\frac{\partial X}{\partial W}\biggr |_Z dW+\frac{\partial X}{\partial Z}\biggr |_W \biggr (\frac{\partial Z}{\partial W}\biggr |_Y dW+\frac{\partial Z}{\partial Y}\biggr |_W dY\biggr )$$
+$$dX=\biggr (\frac{\partial X}{\partial W}\biggr |_Z+\frac{\partial X}{\partial Z}\biggr |_W \frac{\partial Z}{\partial W}\biggr |_Y\biggr ) dW+\frac{\partial X}{\partial Z}\biggr |_W \frac{\partial Z}{\partial Y}\biggr |_W dY$$
+We may select any two variables as independent and ask how the others vary for example select Y and W as our two parameter, do not allow Y to very but do very W i.e.. dY=0.  How does dX change?
+$$dX=\frac{\partial X}{\partial W}\biggr |_Y dW$$
+However we now also have another answer:
+$$dX=\biggr (\frac{\partial X}{\partial W}\biggr |_Z+\frac{\partial X}{\partial Z}\biggr |_W \frac{\partial Z}{\partial W}\biggr |_Y\biggr ) dW$$
+Since the answer to "how does X very when dY is 0?" must be unique we know that the two solutions we obtain must be equal.
+$$\biggr (\frac{\partial X}{\partial W}\biggr |_Z+\frac{\partial X}{\partial Z}\biggr |_W \frac{\partial Z}{\partial W}\biggr |_Y\biggr ) dW=\frac{\partial X}{\partial W}\biggr |_Y dW$$
+$$\frac{\partial X}{\partial W}\biggr |_Z+\frac{\partial X}{\partial Z}\biggr |_W \frac{\partial Z}{\partial W}\biggr |_Y=\frac{\partial X}{\partial W}\biggr |_Y$$
+$$\frac{\partial X}{\partial W}\biggr |_Y-\frac{\partial X}{\partial W}\biggr |_Z=\frac{\partial X}{\partial Z}\biggr |_W \frac{\partial Z}{\partial W}\biggr |_Y$$
+$$g_Y-g_Z=\frac{\partial X}{\partial Z}\biggr |_W \frac{\partial Z}{\partial W}\biggr |_Y$$
+\subsection{b}
+Suppose we also have the following definitions: $K\equiv -\frac{1}{Z}\frac{\partial Z}{\partial Y}\biggr |_W$ and $B\equiv \frac{1}{Z}\frac{\partial Z}{\partial W}\biggr |_Y$.  Further, it is given that $\frac{\partial X}{\partial Z}\biggr |_W=\frac{\partial Y}{\partial W}\biggr |_Z$. Show in general that $g_Y-g_Z=B^2Z/K$.\\
+
+$$B^2Z/K=-\biggr (\frac{\partial Z}{\partial W}\biggr |_Y \biggr )^2 \frac{\partial Y}{\partial Z}\biggr |_W$$
+Recall that:
+$$-1=\frac{\partial Y}{\partial Z}\biggr |_W \frac{\partial W}{\partial Y}\biggr |_Z \frac{\partial Z}{\partial W}\biggr |_Y$$
+$$\frac{\partial Y}{\partial W}\biggr |_Z=-\frac{\partial Y}{\partial Z}\biggr |_W \frac{\partial Z}{\partial W}\biggr |_Y$$
+$$\frac{\partial X}{\partial Z}\biggr |_W=-\frac{\partial Y}{\partial Z}\biggr |_W \frac{\partial Z}{\partial W}\biggr |_Y$$
+Plugging this in above:
+$$B^2Z/K=\frac{\partial X}{\partial Z}\biggr |_W \frac{\partial Z}{\partial W}\biggr |_Y$$
+Witch from above will in general be $g_Y-g_Z$.
+\section{2}
+
+Suppose that we are given the following general relation between the heat capacities:
+$$C_P=C_V+\frac{\partial Q}{\partial V}\biggr |_T \frac{\partial V}{\partial T}\biggr |_P$$
+By the First Law of Thermodynamics, $dU = dQ - dW$; for a hydrostatic system, this becomes $dU = dQ - P dV$ , and it directly follows that $\frac{\partial Q}{\partial V}\biggr |_T=\frac{\partial U}{\partial V}\biggr |_T+P$. As a
+result, for a hydrostatic system we have
+$$C_P=C_V+\biggr [P+\frac{\partial U}{\partial V}\biggr |_T\biggr ] \frac{\partial V}{\partial T}\biggr |_P$$
+\subsection{a}
+Show that $\frac{\partial U}{\partial V}\biggr |_T=\frac{C_P-C_V}{\beta V}-P$, where the coefficient of volume expansion $\beta=\frac{1}{V}\frac{\partial V}{\partial T}\biggr |_P$.\\
+
+This is purely algebra from:
+$$C_P=C_V+\biggr [P+\frac{\partial U}{\partial V}\biggr |_T\biggr ] \frac{\partial V}{\partial T}\biggr |_P$$
+$$C_P=C_V+\biggr [P+\frac{\partial U}{\partial V}\biggr |_T\biggr ] V\beta$$
+$$C_P-C_V=\biggr [P+\frac{\partial U}{\partial V}\biggr |_T\biggr ] V\beta$$
+$$\frac{C_P-C_V}{V\beta}=P+\frac{\partial U}{\partial V}\biggr |_T $$
+$$\frac{C_P-C_V}{V\beta}-P=\frac{\partial U}{\partial V}\biggr |_T $$
+\subsection{b}
+Use the identity $\frac{\partial Q}{\partial V}\biggr |_T=T\frac{\partial P}{\partial T}\biggr |_V$ (which we will subsequently derive in class), to show that for an ideal gas $\frac{\partial U}{\partial V}\biggr |_T=0$.\\
+
+We are here discussing a ideal gas thus $P=\frac{nRT}{V}$.  Note that: $$\frac{\partial Q}{\partial V}\biggr |_T=T\frac{\partial P}{\partial T}\biggr |_V=T\frac{nR}{V}=P$$
+Using the equation $\frac{\partial Q}{\partial V}\biggr |_T=\frac{\partial U}{\partial V}\biggr |_T+P$ we see:
+$$\frac{\partial Q}{\partial V}\biggr |_T=\frac{\partial U}{\partial V}\biggr |_T+P =P\Rightarrow0=\frac{\partial U}{\partial V}\biggr |_T$$
+\subsection{c}
+Now show that $\frac{\partial U}{\partial P}\biggr |_T=0$ as well.  Thus, show that the internal energy of an ideal gas is a function only of temperature: U = U(T). (This is purely an exercise in shifting to a different pair of independent variables, and thus no further ‘magical’ identities are needed – in fact you will be penalized for using any as-yet underived identities.)\\
+
+Lets first write dU in two different forms (first U(T,V) then U(T,P)):
+$$dU=\frac{\partial U}{\partial V}\biggr |_TdV +\frac{\partial U}{\partial T}\biggr |_VdT$$
+$$dU=\frac{\partial U}{\partial P}\biggr |_TdP +\frac{\partial U}{\partial T}\biggr |_PdT$$
+Now find dP assuming P(T,V):
+$$dP=\frac{\partial P}{\partial V}\biggr |_TdV +\frac{\partial P}{\partial T}\biggr |_VdT$$
+Consider the situation where we hold T fixed and allow V to very.  How does U change?
+$$dU=\frac{\partial U}{\partial V}\biggr |_TdV$$
+$$dU=\frac{\partial U}{\partial P}\biggr |_TdP$$
+Note:
+$$dP=\frac{\partial P}{\partial V}\biggr |_TdV$$
+so:
+$$dU=\frac{\partial U}{\partial V}\biggr |_TdV$$
+$$dU=\frac{\partial U}{\partial P}\biggr |_T\frac{\partial P}{\partial V}\biggr |_TdV$$
+$$\frac{\partial U}{\partial V}\biggr |_T=\frac{\partial U}{\partial P}\biggr |_T\frac{\partial P}{\partial V}\biggr |_T$$
+$$0=\frac{\partial U}{\partial P}\biggr |_T\frac{\partial P}{\partial V}\biggr |_T$$
+Note that (assuming that we actually have a real situation i.e.. $P,V,n,T\neq0$):
+$$\frac{\partial P}{\partial V}\biggr |_T=-\frac{nRT}{V^2}\neq 0$$
+We must conclude:
+$$0=\frac{\partial U}{\partial P}\biggr |_T$$
+Since U does not change when ether P or V change while temperature is held fixed the internal energy cannot depend on ether P or V.
+\subsection{d}
+From part (b), we know that for an ideal gas, $\frac{\partial U}{\partial V}\biggr |_T=0$. Use this to show that for an ideal gas, $C_P - C_V = nR$.\\
+
+We know that:
+$$C_P=C_V+\biggr [P+\frac{\partial U}{\partial V}\biggr |_T\biggr ] \frac{\partial V}{\partial T}\biggr |_P$$
+$$C_P=C_V+ P \frac{\partial V}{\partial T}\biggr |_P$$
+Note:
+$$V=\frac{nRT}{P}$$
+So:
+$$P\frac{\partial V}{\partial T}\biggr |_P=nR$$
+$$C_P=C_V+ nR$$
+$$C_P-C_V= nR$$
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
