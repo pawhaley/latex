@@ -1,0 +1,201 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\author{Parker Whaley}
+\title{PHYS 462 (optics) HW\#5}
+\begin{document}
+\maketitle
+\section{6.8}
+We will assume that the flower is short relative to the $4m$ distance to the lense, thus we can make the small angele approximation.  We will procede with a matrix approch.
+$$
+T_1=
+\begin{bmatrix}
+1 & 4\\
+0 & 1
+\end{bmatrix}$$
+
+$$
+R_2=
+\begin{bmatrix}
+1 & 0\\
+5*(1/1.4-1) & 1/1.4
+\end{bmatrix}$$
+
+$$
+T_3=
+\begin{bmatrix}
+1 & .2\\
+0 & 1
+\end{bmatrix}$$
+
+$$
+R_4=
+\begin{bmatrix}
+1 & 0\\
+-2 & 1.4
+\end{bmatrix}$$
+
+$$
+T_5=
+\begin{bmatrix}
+1 & L\\
+0 & 1
+\end{bmatrix}$$
+
+$$
+T_5 * R_4 * T_3 * R_2 * T_1=
+\begin{bmatrix}
+.714-3.429L&3-13L\\
+-3.429 & -13
+\end{bmatrix}$$
+
+So we will have a image formed at $3-13L=0$ or $L=3/13m$ beyond the opposite side of the sphere.  At a magnification of $.714-3.429L=-0.077308$ so it will be inverted and smaller.
+
+\section{6.9}
+We can also do this with matraces
+$$
+R_1=
+\begin{bmatrix}
+1&   0\\
+.029 &  2/3
+\end{bmatrix}$$
+
+$$
+T_2=
+\begin{bmatrix}
+1 & 9\\
+0 & 1
+\end{bmatrix}$$
+
+$$
+R_3=
+\begin{bmatrix}
+1&   0\\
+.075 &  1.5
+\end{bmatrix}$$
+
+$$
+T_4=
+\begin{bmatrix}
+1 & L\\
+0 & 1
+\end{bmatrix}$$
+
+$$
+T_4*R_3*T_2*R_1=
+\begin{bmatrix}
+1.26+.138L&6+1.45L\\
+.138&1.45
+\end{bmatrix}$$
+
+The point where $1.26+.138L=0$ will be our focus $f=-1.26/.138cm$ puting our fucus inside of the lense.
+
+\section{6.14}
+see fig1\\
+We can use the thin lense equation to see what hapens to rais originating at infinity.  Passing thrugh the first lense they form a image at the focus.  In our thin lense equation for the second lense the new object would be at $S_o=-10cm$ so we get $1/-10+1/S_i=1/-20$ or $1/S_i=1/20$ or $S_i=20cm$ we end up with the focal point of the entre system at the right focal point of the diverging lense.
+
+\section{6.16}
+We will simply calculate the matrecies as before.
+$$
+R_1=
+\begin{bmatrix}
+1&   0\\
+.01583 &  .79167
+\end{bmatrix}$$
+
+$$
+T_2=
+\begin{bmatrix}
+1&   9.6\\
+0 &  1
+\end{bmatrix}$$
+
+$$
+R_3=
+\begin{bmatrix}
+1&   0\\
+.01263 &  1.26316
+\end{bmatrix}$$
+
+$$
+R_3*T_2*R_1=
+\begin{bmatrix}
+1.152&   7.6\\
+0.034552&   1.096
+\end{bmatrix}$$
+using octave the det is 1.
+\section{6.22}
+$$
+R_1=
+\begin{bmatrix}
+1.00000&   0.00000\\
+-0.06667&   0.66667
+\end{bmatrix}$$
+
+$$
+T_2=
+\begin{bmatrix}
+1&   1\\
+0&   1
+\end{bmatrix}$$
+
+$$
+R_3=
+\begin{bmatrix}
+1&   0\\
+0 &  1.5
+\end{bmatrix}$$
+
+$$
+R_3*T_2*R_1=
+\begin{bmatrix}
+0.93333&   0.66667\\
+-0.10000&   1.00000
+\end{bmatrix}$$
+from octave the det is 1.
+\section{6.24}
+$$
+R_1=
+\begin{bmatrix}
+1&   0\\
+2/R&   1
+\end{bmatrix}$$
+
+$$
+T_2=
+\begin{bmatrix}
+1&   d\\
+0&   1
+\end{bmatrix}$$
+
+
+
+$$T_2*R_1*R_1*T_2*R_1$$
+
+This will yeald the same matrix as the book (using octave), however it will be transposed since the book is working in the transposed space relative to us.  Also I note that the book is working in the right direction beeing positive, we take the direction the light is traveling to be positive.
+
+Anyway if we plug in $d=r$ we get 
+$$
+M=
+\begin{bmatrix}
+-1&   0\\
+0&-1
+\end{bmatrix}$$
+By inspection if we apply this matrix to itself we will get the identity matrix thus after four reflections we are left with the ray at its origional position and angle.
+\section{6.28}
+\subsection{a}
+Spherical aberation since it is a rotationaly symetric aberation.
+\subsection{b}
+Coma.  See fig 6.23 it is identical.
+\subsection{c}
+I think this is astigmatism since it has a little of the cross patern, its a little bit of a bad image so I cant be sure.
+\section{6.29}
+\subsection{a}
+Its got the cross pattern so astigmatism.
+\subsection{b}
+Coma.  See fig 6.23 in the book it looks very similar.
+
+
+\end{document}
