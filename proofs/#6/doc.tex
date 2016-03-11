@@ -1,0 +1,45 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amssymb}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\author{Parker Whaley}
+\title{Proof HW}
+\begin{document}
+\maketitle
+\section{}
+Therm.\\
+$x<0\Rightarrow x^{-1}<0$.\\
+Proof.\\
+We will proceed with a proof by contradiction.\\
+Suppose $x<0$.\\
+Now suppose $x^{-1}>0$.  Note that we proved on the previous homework that $(\forall a \in \mathbb{R})(-1)a=-a$ thus $(-1)x=(-x)$.  Note $x\cdot x^{-1}=1$ by the definition of multiplicative inverse.  Since multiplication is well defined we may say $(-1)\cdot x\cdot x^{-1}=(-1)\cdot 1$.  With the property stated above and noting that one is the multiplicative identity we see that $(-x)\cdot x^{-1}=(-1)$.  By corollary $2.2.3$ we can say $x<0\Rightarrow (-x)>0$.  Since $(-x)>0$ and $x^{-1}>0$ we can say by the trichotomy law (A18) that $(-x)\cdot x^{-1}>0$ thus $(-1)>0$.  By corollary $2.2.3$ we can say $1<0$.  We showed in class that $1>0$.  Contradiction, by the law of trichotomy it is impossible for $1<0$ and $1>0$ thus our initial assumption that $x^{-1}>0$ must be false.\\
+Next let us suppose $x^{-1}=0$.  Note $x\cdot x^{-1}=1$ by the definition of multiplicative inverse.  Also note that $x\cdot x^{-1}=x\cdot 0=0$ by therm $2.1.11$.  Thus $1=0$.  Contradiction, (A15) states $1\neq 0$ so our assumption $x^{-1}=0$ must be false.\\
+By the law of trichotomy $x^{-1}\ngtr 0$ and $x^{-1}\neq 0$ must mean $x^{-1}<0$.\\$\Box$
+
+\section{}
+Therm.\\
+$x\neq 0\Rightarrow x^2>0$
+Proof.\\
+Suppose $x\neq 0$.\\
+Note, by the definition of additive inverse, $(-1)+1=0\Rightarrow (-(-1))+(-1)+1=(-(-1))\Rightarrow 1=-(-1)$.   also note $(-1)\in \mathbb{R}$ thus $(-1)\cdot (-1)=-(-1)$ so $1=(-1)(-1)$ (we will need this later).  Note $x^2=x\cdot x$ by the definition of square.  Let us consider the two remaining possibilities given by the law of trichotomy $x<0$ or $x>0$.\\
+Suppose $x<0$.  Note that $x\cdot x=1\cdot x\cdot x=(-1)\cdot (-1) \cdot x\cdot x=(-1) \cdot x\cdot (-1) \cdot x=(-x)\cdot (-x)$.  By corollary $2.2.3$ note that $x<0\Rightarrow (-x)>0$ thus by the law of trichotomy $(-x)\cdot (-x)>0$ thus in this case $x^2>0$.\\
+Suppose $x>0$.  By the law of trichotomy $x\cdot x>0$ thus in this case $x^2>0$.\\
+Since $x^2>0$ in both of the remaining cases we can say that $x^2>0$\\$\Box$
+
+\section{}
+Therm.\\
+If $m|j\wedge m|k$ then m divides any integer linear combination of j and k.\\
+proof.\\
+Suppose $m|j$ and $m|k$.  Choose a integer linear combination of j and k, lets call it n.  Since n is a integer linear combination of j and k we know there exist two integers, let us call them i and l, such that $n=i\cdot j+l\cdot k$.  By definition we know that there exists a integer x such that $m\cdot x=j$, and some integer y such that $m\cdot y=k$.  Note  $n=i\cdot m\cdot x+l\cdot m\cdot y=m(i\cdot x+l\cdot y)$.  Note that $i\cdot x+l\cdot y$ is a integer thus by definition $m|n$.  Since n was a arbitrary integer linear combination of j and k we can generalize and say that m divides all integer linear combination of j and k.\\$\Box$
+
+\section{}
+Therm.\\
+If $m|n$ for all n where n is a integer linear combination of j and k then $m|j$ and $m|k$.\\
+Proof.\\
+Suppose $m|n$ for all n where n is a integer linear combination of j and k.  Note that $0\cdot j+1\cdot k$ is a integer linear combination of j and k thus $m|(0\cdot j+1\cdot k)\Rightarrow m|k$.  Note that $1\cdot j+0\cdot k$ is a integer linear combination of j and k thus $m|(1\cdot j+0\cdot k)\Rightarrow m|j$.  We have thus shown that $m|j$ and $m|k$.\\$\Box$
+
+
+
+
+
+\end{document}
