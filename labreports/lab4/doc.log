@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.2.1)  17 MAR 2016 18:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.2.1)  20 MAR 2016 16:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -154,27 +154,101 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 8.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
+<yellow.PNG, id=1, 673.01437pt x 490.83376pt>
+File: yellow.PNG Graphic file (type png)
+ <use yellow.PNG>
+Package pdftex.def Info: yellow.PNG used on input line 33.
+(pdftex.def)             Requested size: 154.79004pt x 112.88939pt.
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./doc.aux) ) 
+<red.PNG, id=3, 672.26157pt x 493.845pt>
+File: red.PNG Graphic file (type png)
+ <use red.PNG>
+Package pdftex.def Info: red.PNG used on input line 33.
+(pdftex.def)             Requested size: 154.6169pt x 113.58195pt.
+
+<orange.PNG, id=4, 673.01437pt x 484.05844pt>
+File: orange.PNG Graphic file (type png)
+ <use orange.PNG>
+Package pdftex.def Info: orange.PNG used on input line 33.
+(pdftex.def)             Requested size: 154.79004pt x 111.33109pt.
+
+<green.PNG, id=5, 671.50874pt x 484.81125pt>
+File: green.PNG Graphic file (type png)
+ <use green.PNG>
+Package pdftex.def Info: green.PNG used on input line 35.
+(pdftex.def)             Requested size: 154.44376pt x 111.50424pt.
+
+<blue.PNG, id=6, 672.26157pt x 485.56406pt>
+File: blue.PNG Graphic file (type png)
+ <use blue.PNG>
+Package pdftex.def Info: blue.PNG used on input line 35.
+(pdftex.def)             Requested size: 154.6169pt x 111.67738pt.
+
+<violet.PNG, id=7, 670.75594pt x 490.08093pt>
+File: violet.PNG Graphic file (type png)
+ <use violet.PNG>
+Package pdftex.def Info: violet.PNG used on input line 35.
+(pdftex.def)             Requested size: 154.27061pt x 112.71623pt.
+
+Overfull \hbox (47.22908pt too wide) in paragraph at lines 30--55
+[]
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2 <./yellow.PNG> <./red.P
+NG> <./orange.PNG> <./green.PNG> <./blue.PNG> <./violet.PNG>]
+<diamvsf.png, id=27, 578.16pt x 434.5836pt>
+File: diamvsf.png Graphic file (type png)
+ <use diamvsf.png>
+Package pdftex.def Info: diamvsf.png used on input line 90.
+(pdftex.def)             Requested size: 404.70924pt x 304.20644pt.
+
+<wevevsf.png, id=28, 578.16pt x 434.5836pt>
+File: wevevsf.png Graphic file (type png)
+ <use wevevsf.png>
+Package pdftex.def Info: wevevsf.png used on input line 92.
+(pdftex.def)             Requested size: 404.70924pt x 304.20644pt.
+
+<sandt.png, id=29, 578.16pt x 434.5836pt>
+File: sandt.png Graphic file (type png)
+ <use sandt.png>
+Package pdftex.def Info: sandt.png used on input line 94.
+(pdftex.def)             Requested size: 404.70924pt x 304.20644pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--95
+
+ []
+
+[3 <./diamvsf.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
+
+ []
+
+[4 <./wevevsf.png> <./sandt.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
+
+ []
+
+[5] (./doc.aux) ) 
 Here is how much of TeX's memory you used:
- 1805 strings out of 494957
- 24805 string characters out of 6180029
- 78171 words of memory out of 5000000
- 5036 multiletter control sequences out of 15000+600000
- 11789 words of font info for 46 fonts, out of 8000000 for 9000
+ 1858 strings out of 494957
+ 25449 string characters out of 6180029
+ 82171 words of memory out of 5000000
+ 5073 multiletter control sequences out of 15000+600000
+ 12096 words of font info for 47 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 37i,8n,26p,237b,192s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr17.pfb>
-Output written on doc.pdf (1 page, 48438 bytes).
+ 37i,11n,26p,256b,206s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on doc.pdf (5 pages, 178547 bytes).
 PDF statistics:
- 28 PDF objects out of 1000 (max. 8388607)
- 19 compressed objects within 1 object stream
+ 56 PDF objects out of 1000 (max. 8388607)
+ 28 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
