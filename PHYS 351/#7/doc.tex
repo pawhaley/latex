@@ -1,0 +1,76 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{amssymb}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\author{Parker Whaley}
+\title{PHYS 351 \#7}
+\begin{document}
+\maketitle
+\section{}
+We have shown in class that the Carnot cycle has the four stages: isothermal absorption of heat from a hot reservoir, adiabatic expansion, isothermal rejection of heat to a cold reservoir, adiabatic compression. The ideal gas equation of state $PV = nRT$ tells us how the gas behaves during the isothermal changes. During the adiabatic changes, $P V^{\gamma}$ is constant. We have a Carnot engine which uses an ideal gas for the working substance.
+\subsection{}
+ Suppose that the hot reservoir has temperature $T_h$ and the cold reservoir has temperature $T_c$. What is the efficiency of the Carnot engine?\\\\
+This was a extreamly confusing question...  Are we supposed to assume that the thermodynamic temperature is the ideal gas temperature and $\eta=1-T_c/T_h$?  Are we supposed to procede from the ideal gas equation and show that the equation $\eta=1-T_c/T_h$ holds?  I tried this method but was unable to procede beyond a point without making the assumption that T is a thermodynamic temperature.  I give up on this question I have no idea of how to show that ideal gas temperature is a thermodynamic temperature.  In fact I don't eaven think this is posible because it would allow me to define $PV/nR=T$ for all gases and thus all gases regardless of there properties could be treated as ideal - this fails.
+\subsection{}
+The isothermal absorption step takes the volume from $V_1$ to $V_2$. What is the work done on the system during one cycle of the engine? (Express your answer in terms of the given parameters: $n$, $R$, $T_h$, $T_c$, $V_1$, and $V_2$.)\\\\
+We have four steps in our carnot cycle.\\
+Isothermal: $PV=nRT_h$\\
+Adiabatic: $PV^\gamma=PV^\gamma$\\
+Isothermal: $PV=nRT_c$\\
+Adiabatic: $PV^\gamma=PV^\gamma$\\\\
+Along each of these paths $\Delta w=-\int PdV$.  Let's add these up.\\
+$$\Delta w_1=-\int \frac{nRT_h}{V}dV=nRT_h\ln(\frac{V_1}{V_2})$$
+$$\Delta w_2=-\int PV^\gamma\cdot V^{-\gamma} dV=- P_2 V_2^\gamma\int V^{-\gamma} dV=-\frac{P_2 V_2^\gamma}{1-\gamma} (V_3^{1-\gamma}-V_2^{1-\gamma})=-\frac{P_3 V_3-P_2 V_2}{1-\gamma}$$
+Noting that $P_2 V_2^\gamma=P_3 V_3^\gamma$.  Also note that $P_3 V_3=P_4 V_4$ so:
+$$\Delta w_2=-\frac{P_4 V_4-P_2 V_2}{1-\gamma}$$
+$$\Delta w_3=-\int \frac{nRT_c}{V}dV=nRT_c\ln(\frac{V_3}{V_4})$$
+$$\Delta w_4=-\int PV^\gamma\cdot V^{-\gamma} dV=- P_4 V_4^\gamma\int V^{-\gamma} dV=-\frac{P_4 V_4^\gamma}{1-\gamma} (V_1^{1-\gamma}-V_4^{1-\gamma})=-\frac{P_1 V_1-P_4 V_4}{1-\gamma}$$
+Noting that $P_4 V_4^\gamma=P_1 V_1^\gamma$.  Also note that $P_1 V_1=P_2 V_2$ so:
+$$\Delta w_4=-\frac{P_2 V_2-P_4 V_4}{1-\gamma}$$
+Adding all of these up we get (I will drop $\Delta w_2$ and $\Delta w_4$ since they add to nothing):
+$$\sum w=nRT_h\ln(\frac{V_1}{V_2})+nRT_c\ln(\frac{V_3}{V_4})$$
+Note:
+$$\frac{V_3}{V_4}=\sqrt[\gamma-1]{\frac{V_4 V_3^\gamma}{V_3 V_4^\gamma}}=\sqrt[\gamma-1]{\frac{P_4 V_4 P_3V_3^\gamma}{P_3 V_3 P_4 V_4^\gamma}}$$
+Noting that: 
+$P_4 V_4=P_3 V_3$
+and that 
+$P_3V_3^\gamma=P_2V_2^\gamma$
+and 
+$P_4 V_4^\gamma=P_1 V_1^\gamma$
+we see
+$$\frac{V_3}{V_4}=\sqrt[\gamma-1]{\frac{P_2V_2^\gamma}{P_1 V_1^\gamma}}=\sqrt[\gamma-1]{\frac{P_2V_2V_2^{\gamma-1}}{P_1 V_1V_1^{\gamma-1}}}$$
+Note $P_2 V_2=P_1 V_1$
+$$\frac{V_3}{V_4}=\sqrt[\gamma-1]{\frac{V_2^{\gamma-1}}{V_1^{\gamma-1}}}=\frac{V_2}{V_1}$$
+$$\sum w=nRT_h\ln(\frac{V_1}{V_2})+nRT_c\ln(\frac{V_2}{V_1})$$
+\subsection{}
+How much heat energy is drawn from the hot reservoir? How much heat energy is rejected to the cold reservoir? (Express your answer in terms of the given parameters: $n$, $R$, $T_h$, $T_c$, $V_1$, and $V_2$.)\\\\
+$$\eta=-w/Q_h\Rightarrow Q_h=-w/\eta=-\frac{nRT_h\ln(\frac{V_1}{V_2})+nRT_c\ln(\frac{V_2}{V_1})}{1-T_c/T_h}$$
+$$Q_c=Q_h\frac{T_c}{T_h}=-\frac{nRT_h\ln(\frac{V_1}{V_2})+nRT_c\ln(\frac{V_2}{V_1})}{T_h/T_c-1}$$
+\section{}
+A paramagnetic salt has a magnetic susceptibility $\chi_m =b/T$, where $b$ is a constant; recall that $B = \mu_0(H + M)$ and $M = \chi_m H$. Thus, isothermal curves in the $BM$ plane are lines of constant slope. Adiabats are lines of constant M. We have a Carnot engine which uses a paramagnetic salt for the working substance. Assume that we have a unit volume of paramagnetic salt, and that all parts of the system are uniform.
+\subsection{}
+Suppose that the hot reservoir has temperature $T_h$ and the cold reservoir has temperature $T_c$. What is the efficiency of the Carnot engine?\\\\
+Same argument as before $\eta=1-T_c/T_h$.
+\subsection{}
+The isothermal absorption process takes the magnetic induction from $B_1$ to $B_2$.  What is the work done on the system during one cycle of the engine? (Express your answer in terms of the given parameters: $b$, $\mu_0$, $T_h$, $T_c$, $B_1$, and $B_2$.)\\\\
+We have a four step carnot engine:\\
+1. $T_h$\\
+2. $m_\alpha=m_\beta$\\
+3. $T_c$\\
+4. $m_\alpha=m_\beta$\\\\
+Along all legs of our carnot engine $dw=\mu (T/b+1)mdmdV$.  Note that since we are always dealing with a unit volume and none of the other aspects of dw depend on position we can simply integrate it out to get $dw=V\mu (T/b+1)mdm$.  Lets now compute the work done allong each leg:
+$$\Delta w_1=\int V\mu (T_h/b+1)mdm=2V\mu (T_h/b+1)(m_2^2-m_1^2)$$
+$$\Delta w_2=\int V\mu (T/b+1)m_2dm=\int_{m_2}^{m_3}=0$$
+since $m_2=m_3$
+$$\Delta w_3=\int V\mu (T_c/b+1)mdm=2V\mu (T_c/b+1)(m_3^2-m_4^2)=2V\mu (T_c/b+1)(m_2^2-m_1^2)$$
+$$\Delta w_4=\int V\mu (T/b+1)m_4dm=\int_{m_4}^{m_1}=0$$
+so:
+$$\sum w=2V\mu (T_h/b+T_c/b+2)(m_2^2-m_1^2)$$
+$$m=B/(\mu T/b+1)$$
+$$\sum w=2V\mu (T_h/b+T_c/b+2)((B_2/(\mu T_h/b+1))^2-(B_1/(\mu T_h/b+1))^2)$$
+\subsection{}
+How much heat energy is drawn from the hot reservoir? How much heat energy is rejected to the cold reservoir? (Express your answer in terms of the given parameters: $b$, $\mu_0$, $T_h$, $T_c$, $B_1$, and $B_2$.)\\\\
+$$\eta=-w/Q_h\Rightarrow Q_h=-w/\eta=-\frac{2V\mu (T_h/b+T_c/b+2)((B_2/(\mu T_h/b+1))^2-(B_1/(\mu T_h/b+1))^2)}{1-T_c/T_h}$$
+$$Q_c=Q_h\frac{T_c}{T_h}=-\frac{2V\mu (T_h/b+T_c/b+2)((B_2/(\mu T_h/b+1))^2-(B_1/(\mu T_h/b+1))^2)}{T_h/T_c-1}$$
+\end{document}
