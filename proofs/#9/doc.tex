@@ -1,0 +1,27 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{amssymb}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\author{Parker Whaley}
+\title{Proof HW}
+\begin{document}
+\maketitle
+\section{}
+\subsection{}
+Theorem.\\
+If * is closed on sets A and B and $A \cap B \neq \emptyset$ then * is closed on $A \cap B$.\\
+Proof.\\
+Suppose * is closed on sets A and B and $A \cap B \neq \emptyset$.  Chose two arbitrary elements of $A \cap B$ lets call these c and d.  By definition c and d are elements of A and elements of B.  By simplification c and d are elements of A.  Since A is closed under * note that $c*d\in A$.  By simplification c and d are elements of B.  Since B is closed under * note that $c*d\in B$.  Note that $c*d\in A \wedge c*d \in B \rightarrow c*d\in A \cap B$.  Since c and d were chosen arbitrarily from $A \cap B$ and $c*d$ was shown to be in $A \cap B$ we can say that $A \cap B$ is closed under *.
+\subsection{}
+This is false, counterexample.\\
+Suppose * is a operator on the $\mathbb{R}$ that returns the left side if both numbers are the same otherwise it returns the multiple.\\
+Consider sets A={2} B={3}.  Note that since $2*2=2$ and $3*3=3$ that * is closed on both A and B.  We also note that $2*3=6$ witch is not a element of $A \cap B$ thus * is not closed in the set $A \cap B$.
+\section{}
+Show that $\oplus$ is communicative.\\
+Consider two arbitrary / ratios $n/m$ and $j/k$.  Note that:
+$$n/m \oplus j/k=(nk+mj)/(mk)=(jm+kn)/(km)=n/m\oplus j/k$$
+So we can say that for arbitrary ratios $\oplus$ commutes.
+\section{}
+Show that $a/b=a/b\otimes c/c$ given that $c\neq 0\neq b$.\\
+Note that $a/b\otimes c/c=(ac)/(bc)$.  Also note that since $abc=bac$ we can say $a/b=(ac)/(bc)$.  Note $a/b=(ac)/(bc)=a/b\otimes c/c$ thus $a/b=a/b\otimes c/c$.
+\end{document}

@@ -9,6 +9,36 @@
 \maketitle
 \section{}
 Consider the following processes by which one kilogram of liquid water is brought from an initial temperature of $0C$ to a final temperature of $100C$. Assume that the specific heat is $4186 \frac{J}{kgK}$ over the entire temperature range.
+\subsection{}
+The water is put in contact with a large heat reservoir at $100 ^\circ C$ . When the water has reached $100 ^\circ C$, what has been the change of entropy?
+\subparagraph{}
+Of the water?\\
+We know that the relationship between changes in temperature and heat is $dq=cdT$ where $c=4186 \frac{J}{kgK} \cdot 1kg$.  We also know that $dS=\frac{dq}{T}$.  So $dS=\frac{cdT}{T}$ integrating we get $\delta S_w=c\ln(\frac{T_f}{T_i})=c\ln(\frac{T_H}{T_\circ})=1306\frac{J}{K}$.
+\subparagraph{}
+Of the heat reservoir?\\
+Lets calculate the heat in $\delta q=\int cdT=c(T_H-T_\circ)=$.  So the hot reservoir gains $-\delta q$ heat at constant temperature thus $\delta S_H=-\delta q (\frac{1}{T_h})=c(\frac{T_\circ}{T_H}-1)=-1122\frac{J}{K}$
+\subparagraph{}
+Of the entire system (water plus heat reservoir)?\\
+Of course this must be $\delta S_{tot}=\delta S_w+\delta S_H=c(\frac{T_\circ}{T_H}-1+\ln(\frac{T_H}{T_\circ}))$.  Plugging in $\delta S_{tot}=184\frac{J}{K}$
+\subsection{}
+The water is first put in contact with a large heat reservoir at $50^\circ C$. After the water has reached $50^\circ C$, it is put in contact with a large heat reservoir at $100^\circ C$. When the water has reached $100^\circ C$, what has been the change of entropy of the entire system (water plus both heat reservoirs)?\\
+This is equivalent to doing the above procedure twice first with $T_\circ=0^\circ C$ and $T_H=50^\circ C$ then with $T_\circ=50^\circ C$ and $T_H=100^\circ C$.
+$$c(\frac{T_0}{T_1}-1+\ln(\frac{T_1}{T_0})+\frac{T_1}{T_2}-1+\ln(\frac{T_2}{T_1}))=$$
+$$c(\frac{T_0T_2+T_1T_1}{T_1T_2}+\ln(\frac{T_2}{T_0})-2)=97\frac{J}{K}$$
+\subsection{}
+Show how the water might be heated from $0^\circ C$ to $100^\circ C$ with no change in entropy of the entire system. In your discussion, comment on the necessity of using quasi-static steps to create reversible processes.\\
+Suppose we considered taking this volume from a temperature T to another temperature $T+\delta$ by the process of exposing it to a reservoir at $T+\delta$.  We are only going to be interested in this process when $\delta$ is small we are then going to consider moving from T to $T_f$ a finite difference in temperature via infinitesimal steps.  The change in entropy over one of these steps would then be:
+$$\delta S=c(\frac{T}{T+\delta}-1+\ln(\frac{T+\delta}{T}))=$$
+$$c(\frac{1}{1+\delta/T}-1+\ln(1+\delta/T))$$
+Considering $\delta /T$ is small we can expand the terms to get:
+$$c([1-\delta/T]-1+[\delta/T])+O(\delta^2)=O(\delta^2)$$
+Wow our $\delta S$ goes as $O(\delta^2)$ however our number of regions goes as $\delta$.  We can immediately say that in the limit as the difference in temperature goes to 0 that the sum of the entropy goes to 0 since we are summing up $\delta$ terms each of order $\delta^2$.  This process of putting the water in successively hotter and hotter reservoirs where the difference in the temperatures is vanishingly small has no change in entropy.
 \section{}
-The statement adout
+The Clausius statement of the Second Law of Thermodynamics is:\\
+No process is possible whose sole result is the transfer of heat from a colder body to a hotter body.\\
+Show that the Clausius statement of the Second Law of Thermodynamics is consistent with the principle of the increase of entropy.\\
+By our construction of entropy in class from the Clausius statement we may immediately say Clausius $\Rightarrow \delta S\geq 0$.  Let us now show that $\delta S\geq 0\Rightarrow$ Clausius.\\
+We will proceed with a proof by contradiction technique.\\
+Suppose there was a system that violates the Clausius statement but upholds the entropy statement.  Since it violates Clausius we can say that there must be two reservoirs $T_H$ and $T_C$ ($T_H>T_C$) where heat has moved from $T_C \rightarrow T_H$ and the rest of the system has remained unchanged.  Since the rest of the system is in it's original state we may say $\delta S_{other}=0$ since S is a state variable.  Let's denote the infinitesimal heat transferred as $\delta q$ note that $\delta S_H = \frac{\delta q}{T_H}$ and $\delta S_C = \frac{-\delta q}{T_C}$.  We now say that the total change in entropy is $\delta S=\delta S_{other}+\delta S_H+\delta S_C=q(\frac{1}{T_H}-\frac{1}{T_C})<0$.  Contradiction $\delta S \geq 0$ and $\delta S <0$ are incompatible thus our supposition is false and the negation of our supposition, $\delta S\geq 0\Rightarrow$ Clausius, is true.\\
+We can now say $\delta S\geq 0\Leftrightarrow$ Clausius.
 \end{document}
