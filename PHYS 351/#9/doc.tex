@@ -1,0 +1,30 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{amssymb}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\author{Parker Whaley}
+\title{PHYS 351 \#9}
+\begin{document}
+\maketitle
+\section{}
+In class we derived the first $T dS$ equation, $T dS = C_V dT + T\frac{\partial P}{\partial T}|_V dV$ . Let $v$ be the molar volume and let $s$ be the molar entropy, that is, $v = V /n$ and $s = S/n$. Let $c_V$ be the molar specific heat, $c_V = C_V /n$. Then the first $T dS$ equation can be written for molar specific quantities as $T ds = c_V dT + T \frac{\partial P}{\partial T}|_V dv$.
+\subsection{}
+The Ideal Gas equation of state is $P v = RT$. Assume that $c_V$ is constant and integrate the equation of state to show 
+$$s = s_0 + c_V \ln(\frac{T}{T_0})+ R \ln(\frac{v}{v_0})$$
+Note that $\frac{\partial P}{\partial T}|_V=R/v$ so $T ds = c_V dT + T \frac{\partial P}{\partial T}|_V dv$ becomes $ ds = c_V/T dT +  R/v dv$.  We immediately see that if we take the integral we get $s-s_o=c_V (\ln(T)-\ln(T_o))+R(\ln(v)-\ln(v_o))\Rightarrow s = s_0 + c_V \ln(\frac{T}{T_0})+ R \ln(\frac{v}{v_0})$.
+\subsection{}
+The van der Waals equation of state is $(P +a/v^2 )(v - b) = RT$. Assume that $c_v$ is constant and integrate the equation of state to show 
+$$s = s_0 + c_V \ln(T/T_0)+ R \ln(\frac{v - b}{v_0 - b})$$
+Proceeding in the same fashion.  $P= \frac{RT}{(v - b)}-a/v^2 $ so $\frac{\partial P}{\partial T}|_V=\frac{R}{(v - b)}$ and $ ds = c_V/T dT +  \frac{R}{(v - b)} dv$.  Integrating both sides and adding $s_\circ$ we get $s = s_0 + c_V \ln(T/T_0)+ R \ln(\frac{v - b}{v_0 - b})$.
+\section{}
+Consider one mole of a solid or a liquid under hydrostatic pressure; as above, $v$ is the molar volume.
+\subsection{}
+Develop an equation of state by expanding $dv$ in terms of $dT$ and $dP$, and then using the definitions of compressibility and expansion coefficients, $\beta$ and $\kappa$. Show that, if we assume that $\beta$ and $\kappa$ are constant, one obtains
+$$v = v_0[1 + \beta(T - T_0) - \kappa(P - P_0)]$$
+for small changes in $v$.\\
+We can easily get a expression for $v$ assuming $v(T,P)$ in the usual way $dv=1/n\frac{\partial V}{\partial T}|_PdT+1/n\frac{\partial V}{\partial P}|_TdP$.  Note using the definitions of $\kappa$ and $\beta$ that $dv/v=\beta dT-\kappa dP$.  So assuming those two are constant we see $\ln(\frac{v-v_0}{v_0}+1)=\beta(T-T_0)-\kappa(P-P_0)$.  Noting that $\frac{v-v_0}{v_0}$ is a small quantity (we also must note that it is unit-less) we may use a Taylor expansion on $\ln(x+1)$ and take the first term $x$.  Thus we get $\frac{v-v_0}{v_0}=\beta(T-T_0)-\kappa(P-P_0)$ or $v=v_0(1+\beta(T-T_0)-\kappa(P-P_0))$
+\subsection{}
+In class we derived the second $T dS$ equation, $T dS = C_P dT - T(\frac{\partial V}{\partial T} )|P dP$; in terms of molar specific quantities this is $T ds = c_pdT - T(\frac{\partial v}{\partial T} )|P dP$. Now use the second $T dS$ equation to find an expression for the change in molar entropy as $T$ and $P$ change. (You should assume that $c_p$ is constant and, as above, that $\beta$ and $\kappa$ are constant and that changes in $v$ are small.)\\
+We note that the work from the above section will still be valid here and thus $(\frac{\partial v}{\partial T} )|P=v_0\kappa$.  so our equation for entropy becomes $ds = c_p/TdT - v_0\kappa dP$ and $s=s_0+\ln(T/T_0)-v_0\kappa(P-P_0)$.
+\end{document}
